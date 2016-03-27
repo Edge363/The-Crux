@@ -1,0 +1,1989 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onKeyPressed" prefHeight="650.0" prefWidth="1200.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.battleScreenController">
+   <center>
+      <SplitPane>
+         <items>
+            <GridPane hgap="10.0" nodeOrientation="LEFT_TO_RIGHT" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1000.0" minWidth="10.0" prefWidth="1000.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1000.0" minWidth="10.0" prefWidth="164.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="405.0" minHeight="10.0" prefHeight="388.0" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" maxHeight="254.0" minHeight="10.0" prefHeight="232.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TabPane fx:id="tabPane" prefHeight="364.0" prefWidth="984.0" BorderPane.alignment="CENTER">
+                     <tabs>
+                        <Tab id="allyOne" fx:id="allyOne" closable="false" text="Cleave">
+                           <content>
+                              <SplitPane dividerPositions="0.17224080267558528, 0.48494983277591974" prefHeight="337.0" prefWidth="984.0" BorderPane.alignment="CENTER">
+                                 <items>
+                                    <SplitPane dividerPositions="0.08659217877094973" orientation="VERTICAL" snapToPixel="false">
+                                       <items>
+                                          <Label fx:id="explanationTitle2" pickOnBounds="false" text="Cleave" textAlignment="CENTER">
+                                             <effect>
+                                                <Glow level="1.0" />
+                                             </effect>
+                                             <font>
+                                                <Font name="Centaur" size="22.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#ff961e" />
+                                                      <Stop color="#ff6400" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                          <ImageView fx:id="cleavePicture" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../../../../Pictures/Cleave.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </items>
+                                       <padding>
+                                          <Insets top="20.0" />
+                                       </padding>
+                                    </SplitPane>
+                                    <GridPane hgap="10.0" vgap="20.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <SplitPane dividerPositions="0.14545454545454545" prefHeight="57.0" prefWidth="265.0">
+                                             <effect>
+                                                <InnerShadow color="#ffc8c8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Health">
+                                                   <effect>
+                                                      <DropShadow height="25.0" radius="5.75" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="healthBar" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="RED" height="50.0" radius="24.5" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.1590909090909091" prefHeight="55.0" GridPane.rowIndex="1">
+                                             <effect>
+                                                <InnerShadow color="#c8c8ff" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Essence">
+                                                   <effect>
+                                                      <DropShadow height="25.0" radius="5.75" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="essenceBar" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="BLUE" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" prefHeight="55.0" GridPane.rowIndex="2">
+                                             <effect>
+                                                <InnerShadow color="#c8ffc8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stamina">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="25.0" radius="5.75" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="staminaBar" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="#00c800" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <VBox>
+                                             <children>
+                                                <MediaView fx:id="sound" fitHeight="200.0" fitWidth="200.0" GridPane.rowIndex="3" />
+                                                <MediaView fx:id="sound2" fitHeight="200.0" fitWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="701.0" minWidth="10.0" prefWidth="400.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints fillHeight="false" maxHeight="73.0" minHeight="10.0" prefHeight="55.0" vgrow="NEVER" />
+                                          <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="55.0" vgrow="NEVER" />
+                                          <RowConstraints fillHeight="false" maxHeight="149.0" minHeight="10.0" prefHeight="55.0" vgrow="NEVER" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="48.0" />
+                                       </padding>
+                                       <effect>
+                                          <DropShadow spread="0.2" />
+                                       </effect>
+                                    </GridPane>
+                                    <SplitPane dividerPositions="0.23442622950819672" prefHeight="200.0" prefWidth="595.0">
+                                       <items>
+                                          <SplitPane dividerPositions="0.21774193548387097" orientation="VERTICAL" snapToPixel="false" SplitPane.resizableWithParent="false">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <items>
+                                                <SplitPane dividerPositions="0.5, 0.5, 0.5" orientation="VERTICAL">
+                                                   <items>
+                                                      <VBox>
+                                                         <effect>
+                                                            <DropShadow height="100.0" radius="49.5" spread="0.2" width="100.0" />
+                                                         </effect>
+                                                      </VBox>
+                                                      <Button fx:id="attacks" mnemonicParsing="false" onAction="#loadAttacks" prefWidth="145.0" text="Attacks" textFill="#ff961e">
+                                                         <effect>
+                                                            <InnerShadow color="#000064" height="30.0" radius="19.5" width="50.0" />
+                                                         </effect>
+                                                         <font>
+                                                            <Font name="Centaur" size="18.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="spells" mnemonicParsing="false" onAction="#loadSpells" prefHeight="34.0" prefWidth="145.0" text="Spells" textFill="#ff961e">
+                                                         <effect>
+                                                            <InnerShadow color="DARKGREEN" height="30.0" radius="19.5" width="50.0" />
+                                                         </effect>
+                                                         <font>
+                                                            <Font name="Centaur" size="18.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="items" mnemonicParsing="false" onAction="#loadItems" prefWidth="145.0" text="Items" textFill="#ff961e">
+                                                         <effect>
+                                                            <InnerShadow color="#969600" height="30.0" radius="19.5" width="50.0" />
+                                                         </effect>
+                                                         <font>
+                                                            <Font name="Centaur" size="18.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </items>
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                </SplitPane>
+                                                <ListView fx:id="list" onMouseClicked="#loadListView" prefHeight="119.0" prefWidth="140.0" SplitPane.resizableWithParent="false">
+                                                   <effect>
+                                                      <InnerShadow height="50.0" radius="24.5" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                </ListView>
+                                             </items>
+                                             <padding>
+                                                <Insets bottom="10.0" left="11.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </SplitPane>
+                                          <SplitPane centerShape="false" dividerPositions="0.5893854748603352" orientation="VERTICAL" prefHeight="234.0" prefWidth="389.0" scaleShape="false">
+                                             <items>
+                                                <SplitPane>
+                                                   <items>
+                                                      <VBox alignment="CENTER">
+                                                         <children>
+                                                            <Label fx:id="explanationTitle" pickOnBounds="false" text="MoveName" textAlignment="CENTER">
+                                                               <font>
+                                                                  <Font name="Centaur" size="24.0" />
+                                                               </font>
+                                                               <textFill>
+                                                                  <LinearGradient endX="1.0" endY="1.0">
+                                                                     <stops>
+                                                                        <Stop color="#ff9696" />
+                                                                        <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                        <Stop color="#ff6400" offset="1.0" />
+                                                                     </stops>
+                                                                  </LinearGradient>
+                                                               </textFill>
+                                                               <effect>
+                                                                  <Glow level="1.0" />
+                                                               </effect>
+                                                            </Label>
+                                                            <ScrollPane fitToWidth="true" prefViewportHeight="180.0" prefViewportWidth="360.0">
+                                                               <content>
+                                                                  <TextFlow prefWidth="355.0" textAlignment="CENTER">
+                                                                     <children>
+                                                                        <Text fx:id="explanation" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Lots of information,Lots of information,Lots of information,Lots of information, but you don't have to understand it all right now. Throughout the game more of it will make sense. The game has many small tutorials you will play through. Try looking through some of the stats, they have explanations for all the skills and stats.">
+                                                                           <effect>
+                                                                              <Glow level="1.0" />
+                                                                           </effect>
+                                                                           <fill>
+                                                                              <LinearGradient endX="1.0" endY="1.0">
+                                                                                 <stops>
+                                                                                    <Stop color="#ff6400" />
+                                                                                    <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                                    <Stop color="#ff6400" offset="1.0" />
+                                                                                 </stops>
+                                                                              </LinearGradient>
+                                                                           </fill>
+                                                                           <font>
+                                                                              <Font name="Centaur" size="20.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets left="10.0" />
+                                                                     </padding>
+                                                                  </TextFlow>
+                                                               </content>
+                                                               <VBox.margin>
+                                                                  <Insets />
+                                                               </VBox.margin>
+                                                            </ScrollPane>
+                                                         </children>
+                                                      </VBox>
+                                                   </items>
+                                                </SplitPane>
+                                                <HBox fillHeight="false" prefHeight="132.0" prefWidth="357.0" spacing="5.0">
+                                                   <children>
+                                                      <SplitPane>
+                                                         <items>
+                                                            <ListView fx:id="enemyList" onMouseClicked="#playSound" prefHeight="130.0" SplitPane.resizableWithParent="false">
+                                                               <effect>
+                                                                  <InnerShadow />
+                                                               </effect>
+                                                               <HBox.margin>
+                                                                  <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                                               </HBox.margin>
+                                                               <padding>
+                                                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                               </padding>
+                                                            </ListView>
+                                                         </items>
+                                                         <HBox.margin>
+                                                            <Insets bottom="10.0" left="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                         <padding>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                         </padding>
+                                                      </SplitPane>
+                                                      <VBox spacing="5.0">
+                                                         <children>
+                                                            <Button fx:id="moveName" mnemonicParsing="false" onAction="#attack" prefWidth="90.0" text="Attack" wrapText="true">
+                                                               <font>
+                                                                  <Font name="Centaur" size="16.0" />
+                                                               </font>
+                                                               <textFill>
+                                                                  <LinearGradient endX="1.0" endY="1.0">
+                                                                     <stops>
+                                                                        <Stop color="#ff961e" />
+                                                                        <Stop color="#ff6400" offset="1.0" />
+                                                                     </stops>
+                                                                  </LinearGradient>
+                                                               </textFill>
+                                                               <effect>
+                                                                  <InnerShadow choke="0.1" height="20.0" radius="17.0" width="50.0" />
+                                                               </effect>
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                            <Button fx:id="moveName2" layoutX="10.0" layoutY="20.0" mnemonicParsing="false" prefWidth="90.0" text="Skip Turn" wrapText="true">
+                                                               <effect>
+                                                                  <InnerShadow choke="0.1" height="20.0" radius="17.0" width="50.0" />
+                                                               </effect>
+                                                               <font>
+                                                                  <Font name="Centaur" size="16.0" />
+                                                               </font>
+                                                               <textFill>
+                                                                  <LinearGradient endX="1.0" endY="1.0">
+                                                                     <stops>
+                                                                        <Stop color="#ff961e" />
+                                                                        <Stop color="#ff6400" offset="1.0" />
+                                                                     </stops>
+                                                                  </LinearGradient>
+                                                               </textFill>
+                                                            </Button>
+                                                            <Button fx:id="moveName21" layoutX="10.0" layoutY="96.0" mnemonicParsing="false" prefWidth="90.0" text="Run" wrapText="true">
+                                                               <effect>
+                                                                  <InnerShadow choke="0.1" height="20.0" radius="17.0" width="50.0" />
+                                                               </effect>
+                                                               <font>
+                                                                  <Font name="Centaur" size="16.0" />
+                                                               </font>
+                                                               <textFill>
+                                                                  <LinearGradient endX="1.0" endY="1.0">
+                                                                     <stops>
+                                                                        <Stop color="#ff961e" />
+                                                                        <Stop color="#ff6400" offset="1.0" />
+                                                                     </stops>
+                                                                  </LinearGradient>
+                                                               </textFill>
+                                                            </Button>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                             </items>
+                                             <effect>
+                                                <InnerShadow />
+                                             </effect>
+                                             <padding>
+                                                <Insets right="5.0" />
+                                             </padding>
+                                          </SplitPane>
+                                       </items>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </SplitPane>
+                                 </items>
+                              </SplitPane>
+                           </content>
+                        </Tab>
+                        <Tab id="allyTwo" fx:id="allyTwo" closable="false" disable="true" text="empty">
+                           <content>
+                              <SplitPane dividerPositions="0.17224080267558528, 0.48494983277591974" prefHeight="337.0" prefWidth="984.0" BorderPane.alignment="CENTER">
+                                 <items>
+                                    <SplitPane dividerPositions="0.08659217877094973" orientation="VERTICAL" snapToPixel="false">
+                                       <items>
+                                          <Label fx:id="allyOneName" pickOnBounds="false" text="Cleave" textAlignment="CENTER">
+                                             <effect>
+                                                <Glow level="1.0" />
+                                             </effect>
+                                             <font>
+                                                <Font name="Centaur" size="22.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#ff961e" />
+                                                      <Stop color="#ff6400" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                          <ImageView fx:id="allyOnePicture" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" />
+                                       </items>
+                                       <padding>
+                                          <Insets top="20.0" />
+                                       </padding>
+                                    </SplitPane>
+                                    <GridPane hgap="10.0" vgap="20.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <SplitPane dividerPositions="0.14545454545454545" prefHeight="57.0" prefWidth="265.0">
+                                             <effect>
+                                                <InnerShadow color="#ffc8c8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Health">
+                                                   <effect>
+                                                      <DropShadow height="25.0" radius="5.75" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="allyHealthBar1" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="RED" height="50.0" radius="24.5" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.1590909090909091" prefHeight="55.0" GridPane.rowIndex="1">
+                                             <effect>
+                                                <InnerShadow color="#c8c8ff" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Essence">
+                                                   <effect>
+                                                      <DropShadow height="25.0" radius="5.75" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="allyEssenceBar1" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="BLUE" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" prefHeight="55.0" GridPane.rowIndex="2">
+                                             <effect>
+                                                <InnerShadow color="#c8ffc8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stamina">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="25.0" radius="5.75" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="allyStaminaBar1" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="#00c800" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <VBox>
+                                             <children>
+                                                <MediaView fx:id="sound1" fitHeight="200.0" fitWidth="200.0" GridPane.rowIndex="3" />
+                                                <MediaView fx:id="sound21" fitHeight="200.0" fitWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="701.0" minWidth="10.0" prefWidth="400.0" />
+                                       </columnConstraints>
+                                       <effect>
+                                          <DropShadow spread="0.2" />
+                                       </effect>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="48.0" />
+                                       </padding>
+                                       <rowConstraints>
+                                          <RowConstraints fillHeight="false" maxHeight="73.0" minHeight="10.0" prefHeight="55.0" vgrow="NEVER" />
+                                          <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="55.0" vgrow="NEVER" />
+                                          <RowConstraints fillHeight="false" maxHeight="149.0" minHeight="10.0" prefHeight="55.0" vgrow="NEVER" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </GridPane>
+                                    <SplitPane dividerPositions="0.23442622950819672" prefHeight="200.0" prefWidth="595.0">
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <items>
+                                          <SplitPane dividerPositions="0.21774193548387097" orientation="VERTICAL" snapToPixel="false" SplitPane.resizableWithParent="false">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <items>
+                                                <SplitPane dividerPositions="0.5, 0.5, 0.5" orientation="VERTICAL">
+                                                   <items>
+                                                      <VBox>
+                                                         <effect>
+                                                            <DropShadow height="100.0" radius="49.5" spread="0.2" width="100.0" />
+                                                         </effect>
+                                                      </VBox>
+                                                      <Button fx:id="attacks1" mnemonicParsing="false" onAction="#loadAttacks1" prefWidth="145.0" text="Attacks" textFill="#ff961e">
+                                                         <effect>
+                                                            <InnerShadow color="#000064" height="30.0" radius="19.5" width="50.0" />
+                                                         </effect>
+                                                         <font>
+                                                            <Font name="Centaur" size="18.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="spells1" mnemonicParsing="false" onAction="#loadSpells1" prefHeight="34.0" prefWidth="145.0" text="Spells" textFill="#ff961e">
+                                                         <effect>
+                                                            <InnerShadow color="DARKGREEN" height="30.0" radius="19.5" width="50.0" />
+                                                         </effect>
+                                                         <font>
+                                                            <Font name="Centaur" size="18.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="items1" mnemonicParsing="false" onAction="#loadItems1" prefWidth="145.0" text="Items" textFill="#ff961e">
+                                                         <effect>
+                                                            <InnerShadow color="#969600" height="30.0" radius="19.5" width="50.0" />
+                                                         </effect>
+                                                         <font>
+                                                            <Font name="Centaur" size="18.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </items>
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                </SplitPane>
+                                                <ListView fx:id="list1" onMouseClicked="#loadListView1" prefHeight="119.0" prefWidth="140.0" SplitPane.resizableWithParent="false">
+                                                   <effect>
+                                                      <InnerShadow height="50.0" radius="24.5" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                </ListView>
+                                             </items>
+                                             <padding>
+                                                <Insets bottom="10.0" left="11.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </SplitPane>
+                                          <SplitPane centerShape="false" dividerPositions="0.5893854748603352" orientation="VERTICAL" prefHeight="234.0" prefWidth="389.0" scaleShape="false">
+                                             <effect>
+                                                <InnerShadow />
+                                             </effect>
+                                             <items>
+                                                <SplitPane>
+                                                   <items>
+                                                      <VBox alignment="CENTER">
+                                                         <children>
+                                                            <Label fx:id="explanationTitle1" pickOnBounds="false" text="MoveName" textAlignment="CENTER">
+                                                               <effect>
+                                                                  <Glow level="1.0" />
+                                                               </effect>
+                                                               <font>
+                                                                  <Font name="Centaur" size="24.0" />
+                                                               </font>
+                                                               <textFill>
+                                                                  <LinearGradient endX="1.0" endY="1.0">
+                                                                     <stops>
+                                                                        <Stop color="#ff9696" />
+                                                                        <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                        <Stop color="#ff6400" offset="1.0" />
+                                                                     </stops>
+                                                                  </LinearGradient>
+                                                               </textFill>
+                                                            </Label>
+                                                            <ScrollPane fitToWidth="true" prefViewportHeight="180.0" prefViewportWidth="360.0">
+                                                               <content>
+                                                                  <TextFlow prefWidth="355.0" textAlignment="CENTER">
+                                                                     <children>
+                                                                        <Text fx:id="explanation1" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Lots of information,Lots of information,Lots of information,Lots of information, but you don't have to understand it all right now. Throughout the game more of it will make sense. The game has many small tutorials you will play through. Try looking through some of the stats, they have explanations for all the skills and stats.">
+                                                                           <effect>
+                                                                              <Glow level="1.0" />
+                                                                           </effect>
+                                                                           <fill>
+                                                                              <LinearGradient endX="1.0" endY="1.0">
+                                                                                 <stops>
+                                                                                    <Stop color="#ff6400" />
+                                                                                    <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                                    <Stop color="#ff6400" offset="1.0" />
+                                                                                 </stops>
+                                                                              </LinearGradient>
+                                                                           </fill>
+                                                                           <font>
+                                                                              <Font name="Centaur" size="20.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets left="10.0" />
+                                                                     </padding>
+                                                                  </TextFlow>
+                                                               </content>
+                                                               <VBox.margin>
+                                                                  <Insets />
+                                                               </VBox.margin>
+                                                            </ScrollPane>
+                                                         </children>
+                                                      </VBox>
+                                                   </items>
+                                                </SplitPane>
+                                                <HBox fillHeight="false" prefHeight="132.0" prefWidth="357.0" spacing="5.0">
+                                                   <children>
+                                                      <SplitPane>
+                                                         <items>
+                                                            <ListView fx:id="enemyList1" onMouseClicked="#playSound" prefHeight="130.0" SplitPane.resizableWithParent="false">
+                                                               <effect>
+                                                                  <InnerShadow />
+                                                               </effect>
+                                                               <padding>
+                                                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                               </padding>
+                                                               <HBox.margin>
+                                                                  <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                                               </HBox.margin>
+                                                            </ListView>
+                                                         </items>
+                                                         <padding>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                         </padding>
+                                                         <HBox.margin>
+                                                            <Insets bottom="10.0" left="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </SplitPane>
+                                                      <VBox spacing="5.0">
+                                                         <children>
+                                                            <Button fx:id="moveName1" mnemonicParsing="false" onAction="#attack1" prefWidth="90.0" text="Attack" wrapText="true">
+                                                               <effect>
+                                                                  <InnerShadow choke="0.1" height="20.0" radius="17.0" width="50.0" />
+                                                               </effect>
+                                                               <font>
+                                                                  <Font name="Centaur" size="16.0" />
+                                                               </font>
+                                                               <textFill>
+                                                                  <LinearGradient endX="1.0" endY="1.0">
+                                                                     <stops>
+                                                                        <Stop color="#ff961e" />
+                                                                        <Stop color="#ff6400" offset="1.0" />
+                                                                     </stops>
+                                                                  </LinearGradient>
+                                                               </textFill>
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                            <Button fx:id="moveName21" layoutX="10.0" layoutY="20.0" mnemonicParsing="false" prefWidth="90.0" text="Skip Turn" wrapText="true">
+                                                               <effect>
+                                                                  <InnerShadow choke="0.1" height="20.0" radius="17.0" width="50.0" />
+                                                               </effect>
+                                                               <font>
+                                                                  <Font name="Centaur" size="16.0" />
+                                                               </font>
+                                                               <textFill>
+                                                                  <LinearGradient endX="1.0" endY="1.0">
+                                                                     <stops>
+                                                                        <Stop color="#ff961e" />
+                                                                        <Stop color="#ff6400" offset="1.0" />
+                                                                     </stops>
+                                                                  </LinearGradient>
+                                                               </textFill>
+                                                            </Button>
+                                                            <Button fx:id="moveName211" layoutX="10.0" layoutY="96.0" mnemonicParsing="false" prefWidth="90.0" text="Run" wrapText="true">
+                                                               <effect>
+                                                                  <InnerShadow choke="0.1" height="20.0" radius="17.0" width="50.0" />
+                                                               </effect>
+                                                               <font>
+                                                                  <Font name="Centaur" size="16.0" />
+                                                               </font>
+                                                               <textFill>
+                                                                  <LinearGradient endX="1.0" endY="1.0">
+                                                                     <stops>
+                                                                        <Stop color="#ff961e" />
+                                                                        <Stop color="#ff6400" offset="1.0" />
+                                                                     </stops>
+                                                                  </LinearGradient>
+                                                               </textFill>
+                                                            </Button>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                             </items>
+                                             <padding>
+                                                <Insets right="5.0" />
+                                             </padding>
+                                          </SplitPane>
+                                       </items>
+                                    </SplitPane>
+                                 </items>
+                              </SplitPane>
+                           </content>
+                        </Tab>
+                        <Tab id="allyThree" fx:id="allyThree" closable="false" disable="true" text="empty">
+                           <content>
+                              <SplitPane dividerPositions="0.17224080267558528, 0.48494983277591974" prefHeight="337.0" prefWidth="984.0" BorderPane.alignment="CENTER">
+                                 <items>
+                                    <SplitPane dividerPositions="0.08659217877094973" orientation="VERTICAL" snapToPixel="false">
+                                       <items>
+                                          <Label fx:id="allyTwoName" pickOnBounds="false" text="Cleave" textAlignment="CENTER">
+                                             <effect>
+                                                <Glow level="1.0" />
+                                             </effect>
+                                             <font>
+                                                <Font name="Centaur" size="22.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#ff961e" />
+                                                      <Stop color="#ff6400" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                          <ImageView fx:id="allyTwoPicture" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" />
+                                       </items>
+                                       <padding>
+                                          <Insets top="20.0" />
+                                       </padding>
+                                    </SplitPane>
+                                    <GridPane hgap="10.0" vgap="20.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <SplitPane dividerPositions="0.14545454545454545" prefHeight="57.0" prefWidth="265.0">
+                                             <effect>
+                                                <InnerShadow color="#ffc8c8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Health">
+                                                   <effect>
+                                                      <DropShadow height="25.0" radius="5.75" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="allyHealthBar2" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="RED" height="50.0" radius="24.5" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.1590909090909091" prefHeight="55.0" GridPane.rowIndex="1">
+                                             <effect>
+                                                <InnerShadow color="#c8c8ff" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Essence">
+                                                   <effect>
+                                                      <DropShadow height="25.0" radius="5.75" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="allyEssenceBar2" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="BLUE" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" prefHeight="55.0" GridPane.rowIndex="2">
+                                             <effect>
+                                                <InnerShadow color="#c8ffc8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stamina">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="25.0" radius="5.75" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="allyStaminaBar2" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="#00c800" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <VBox>
+                                             <children>
+                                                <MediaView fx:id="sound2" fitHeight="200.0" fitWidth="200.0" GridPane.rowIndex="3" />
+                                                <MediaView fx:id="sound22" fitHeight="200.0" fitWidth="200.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="701.0" minWidth="10.0" prefWidth="400.0" />
+                                       </columnConstraints>
+                                       <effect>
+                                          <DropShadow spread="0.2" />
+                                       </effect>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="48.0" />
+                                       </padding>
+                                       <rowConstraints>
+                                          <RowConstraints fillHeight="false" maxHeight="73.0" minHeight="10.0" prefHeight="55.0" vgrow="NEVER" />
+                                          <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="55.0" vgrow="NEVER" />
+                                          <RowConstraints fillHeight="false" maxHeight="149.0" minHeight="10.0" prefHeight="55.0" vgrow="NEVER" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </GridPane>
+                                    <SplitPane dividerPositions="0.23442622950819672" prefHeight="200.0" prefWidth="595.0">
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <items>
+                                          <SplitPane dividerPositions="0.21774193548387097" orientation="VERTICAL" snapToPixel="false" SplitPane.resizableWithParent="false">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <items>
+                                                <SplitPane dividerPositions="0.5, 0.5, 0.5" orientation="VERTICAL">
+                                                   <items>
+                                                      <VBox>
+                                                         <effect>
+                                                            <DropShadow height="100.0" radius="49.5" spread="0.2" width="100.0" />
+                                                         </effect>
+                                                      </VBox>
+                                                      <Button fx:id="attacks2" mnemonicParsing="false" onAction="#loadAttacks2" prefWidth="145.0" text="Attacks" textFill="#ff961e">
+                                                         <effect>
+                                                            <InnerShadow color="#000064" height="30.0" radius="19.5" width="50.0" />
+                                                         </effect>
+                                                         <font>
+                                                            <Font name="Centaur" size="18.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="spells2" mnemonicParsing="false" onAction="#loadSpells2" prefHeight="34.0" prefWidth="145.0" text="Spells" textFill="#ff961e">
+                                                         <effect>
+                                                            <InnerShadow color="DARKGREEN" height="30.0" radius="19.5" width="50.0" />
+                                                         </effect>
+                                                         <font>
+                                                            <Font name="Centaur" size="18.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="items2" mnemonicParsing="false" onAction="#loadItems2" prefWidth="145.0" text="Items" textFill="#ff961e">
+                                                         <effect>
+                                                            <InnerShadow color="#969600" height="30.0" radius="19.5" width="50.0" />
+                                                         </effect>
+                                                         <font>
+                                                            <Font name="Centaur" size="18.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </items>
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                </SplitPane>
+                                                <ListView fx:id="list2" onMouseClicked="#loadListView2" prefHeight="119.0" prefWidth="140.0" SplitPane.resizableWithParent="false">
+                                                   <effect>
+                                                      <InnerShadow height="50.0" radius="24.5" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                </ListView>
+                                             </items>
+                                             <padding>
+                                                <Insets bottom="10.0" left="11.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </SplitPane>
+                                          <SplitPane centerShape="false" dividerPositions="0.5893854748603352" orientation="VERTICAL" prefHeight="234.0" prefWidth="389.0" scaleShape="false">
+                                             <effect>
+                                                <InnerShadow />
+                                             </effect>
+                                             <items>
+                                                <SplitPane>
+                                                   <items>
+                                                      <VBox alignment="CENTER">
+                                                         <children>
+                                                            <Label fx:id="explanationTitle2" pickOnBounds="false" text="MoveName" textAlignment="CENTER">
+                                                               <effect>
+                                                                  <Glow level="1.0" />
+                                                               </effect>
+                                                               <font>
+                                                                  <Font name="Centaur" size="24.0" />
+                                                               </font>
+                                                               <textFill>
+                                                                  <LinearGradient endX="1.0" endY="1.0">
+                                                                     <stops>
+                                                                        <Stop color="#ff9696" />
+                                                                        <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                        <Stop color="#ff6400" offset="1.0" />
+                                                                     </stops>
+                                                                  </LinearGradient>
+                                                               </textFill>
+                                                            </Label>
+                                                            <ScrollPane fitToWidth="true" prefViewportHeight="180.0" prefViewportWidth="360.0">
+                                                               <content>
+                                                                  <TextFlow prefWidth="355.0" textAlignment="CENTER">
+                                                                     <children>
+                                                                        <Text fx:id="explanation2" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Lots of information,Lots of information,Lots of information,Lots of information, but you don't have to understand it all right now. Throughout the game more of it will make sense. The game has many small tutorials you will play through. Try looking through some of the stats, they have explanations for all the skills and stats.">
+                                                                           <effect>
+                                                                              <Glow level="1.0" />
+                                                                           </effect>
+                                                                           <fill>
+                                                                              <LinearGradient endX="1.0" endY="1.0">
+                                                                                 <stops>
+                                                                                    <Stop color="#ff6400" />
+                                                                                    <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                                    <Stop color="#ff6400" offset="1.0" />
+                                                                                 </stops>
+                                                                              </LinearGradient>
+                                                                           </fill>
+                                                                           <font>
+                                                                              <Font name="Centaur" size="20.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets left="10.0" />
+                                                                     </padding>
+                                                                  </TextFlow>
+                                                               </content>
+                                                               <VBox.margin>
+                                                                  <Insets />
+                                                               </VBox.margin>
+                                                            </ScrollPane>
+                                                         </children>
+                                                      </VBox>
+                                                   </items>
+                                                </SplitPane>
+                                                <HBox fillHeight="false" prefHeight="132.0" prefWidth="357.0" spacing="5.0">
+                                                   <children>
+                                                      <SplitPane>
+                                                         <items>
+                                                            <ListView fx:id="enemyList2" onMouseClicked="#playSound" prefHeight="130.0" SplitPane.resizableWithParent="false">
+                                                               <effect>
+                                                                  <InnerShadow />
+                                                               </effect>
+                                                               <padding>
+                                                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                               </padding>
+                                                               <HBox.margin>
+                                                                  <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                                               </HBox.margin>
+                                                            </ListView>
+                                                         </items>
+                                                         <padding>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                         </padding>
+                                                         <HBox.margin>
+                                                            <Insets bottom="10.0" left="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </SplitPane>
+                                                      <VBox spacing="5.0">
+                                                         <children>
+                                                            <Button fx:id="moveName2" mnemonicParsing="false" onAction="#attack2" prefWidth="90.0" text="Attack" wrapText="true">
+                                                               <effect>
+                                                                  <InnerShadow choke="0.1" height="20.0" radius="17.0" width="50.0" />
+                                                               </effect>
+                                                               <font>
+                                                                  <Font name="Centaur" size="16.0" />
+                                                               </font>
+                                                               <textFill>
+                                                                  <LinearGradient endX="1.0" endY="1.0">
+                                                                     <stops>
+                                                                        <Stop color="#ff961e" />
+                                                                        <Stop color="#ff6400" offset="1.0" />
+                                                                     </stops>
+                                                                  </LinearGradient>
+                                                               </textFill>
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                            <Button fx:id="moveName21" layoutX="10.0" layoutY="20.0" mnemonicParsing="false" prefWidth="90.0" text="Skip Turn" wrapText="true">
+                                                               <effect>
+                                                                  <InnerShadow choke="0.1" height="20.0" radius="17.0" width="50.0" />
+                                                               </effect>
+                                                               <font>
+                                                                  <Font name="Centaur" size="16.0" />
+                                                               </font>
+                                                               <textFill>
+                                                                  <LinearGradient endX="1.0" endY="1.0">
+                                                                     <stops>
+                                                                        <Stop color="#ff961e" />
+                                                                        <Stop color="#ff6400" offset="1.0" />
+                                                                     </stops>
+                                                                  </LinearGradient>
+                                                               </textFill>
+                                                            </Button>
+                                                            <Button fx:id="moveName212" layoutX="10.0" layoutY="96.0" mnemonicParsing="false" prefWidth="90.0" text="Run" wrapText="true">
+                                                               <effect>
+                                                                  <InnerShadow choke="0.1" height="20.0" radius="17.0" width="50.0" />
+                                                               </effect>
+                                                               <font>
+                                                                  <Font name="Centaur" size="16.0" />
+                                                               </font>
+                                                               <textFill>
+                                                                  <LinearGradient endX="1.0" endY="1.0">
+                                                                     <stops>
+                                                                        <Stop color="#ff961e" />
+                                                                        <Stop color="#ff6400" offset="1.0" />
+                                                                     </stops>
+                                                                  </LinearGradient>
+                                                               </textFill>
+                                                            </Button>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                             </items>
+                                             <padding>
+                                                <Insets right="5.0" />
+                                             </padding>
+                                          </SplitPane>
+                                       </items>
+                                    </SplitPane>
+                                 </items>
+                              </SplitPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </TabPane>
+                  <TabPane GridPane.rowIndex="1">
+                     <tabs>
+                        <Tab id="enemyOne" fx:id="enemyOne" closable="false" text="Rat">
+                           <content>
+                              <SplitPane dividerPositions="0.1794425087108014, 0.5513937282229965" prefWidth="1056.0" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <items>
+                                    <SplitPane>
+                                       <items>
+                                          <ImageView fx:id="enemyImage" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../../../../Pictures/rat.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </items>
+                                    </SplitPane>
+                                    <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <SplitPane dividerPositions="0.14545454545454545">
+                                             <effect>
+                                                <InnerShadow color="#ffc8c8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Health">
+                                                   <effect>
+                                                      <DropShadow height="50.0" radius="12.0" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="enemyHealthBar1" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="RED" height="50.0" radius="24.5" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.1590909090909091" GridPane.rowIndex="1">
+                                             <effect>
+                                                <InnerShadow color="#c8c8ff" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Essence">
+                                                   <effect>
+                                                      <DropShadow height="50.0" radius="12.0" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="enemyEssenceBar1" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="BLUE" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" GridPane.rowIndex="2">
+                                             <effect>
+                                                <InnerShadow color="#c8ffc8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stamina">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="50.0" radius="12.0" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="enemyStaminaBar1" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="#00c800" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="701.0" minWidth="10.0" prefWidth="400.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </GridPane>
+                                    <SplitPane>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <items>
+                                          <SplitPane orientation="VERTICAL">
+                                             <effect>
+                                                <InnerShadow />
+                                             </effect>
+                                             <items>
+                                                <VBox alignment="CENTER">
+                                                   <children>
+                                                      <Label fx:id="enemyName" pickOnBounds="false" text="MoveName" textAlignment="CENTER">
+                                                         <effect>
+                                                            <Glow level="1.0" />
+                                                         </effect>
+                                                         <font>
+                                                            <Font name="Centaur" size="24.0" />
+                                                         </font>
+                                                         <textFill>
+                                                            <LinearGradient endX="1.0" endY="1.0">
+                                                               <stops>
+                                                                  <Stop color="#ff9696" />
+                                                                  <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                  <Stop color="#ff6400" offset="1.0" />
+                                                               </stops>
+                                                            </LinearGradient>
+                                                         </textFill>
+                                                      </Label>
+                                                      <ScrollPane fitToWidth="true" prefViewportHeight="180.0" prefViewportWidth="360.0">
+                                                         <content>
+                                                            <TextFlow prefWidth="355.0" textAlignment="CENTER">
+                                                               <children>
+                                                                  <Text fx:id="enemyLore" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Lots of information,Lots of information,Lots of information,Lots of information, but you don't have to understand it all right now. Throughout the game more of it will make sense. The game has many small tutorials you will play through. Try looking through some of the stats, they have explanations for all the skills and stats.">
+                                                                     <effect>
+                                                                        <Glow level="1.0" />
+                                                                     </effect>
+                                                                     <fill>
+                                                                        <LinearGradient endX="1.0" endY="1.0">
+                                                                           <stops>
+                                                                              <Stop color="#ff6400" />
+                                                                              <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                              <Stop color="#ff6400" offset="1.0" />
+                                                                           </stops>
+                                                                        </LinearGradient>
+                                                                     </fill>
+                                                                     <font>
+                                                                        <Font name="Centaur" size="20.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="10.0" />
+                                                               </padding>
+                                                            </TextFlow>
+                                                         </content>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </ScrollPane>
+                                                   </children>
+                                                </VBox>
+                                             </items>
+                                          </SplitPane>
+                                       </items>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </SplitPane>
+                                 </items>
+                              </SplitPane>
+                           </content>
+                        </Tab>
+                        <Tab id="enemyTwo" fx:id="enemyTwo" closable="false" disable="true" text="empty">
+                           <content>
+                              <SplitPane dividerPositions="0.1794425087108014, 0.5513937282229965" prefWidth="1056.0" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <items>
+                                    <SplitPane>
+                                       <items>
+                                          <ImageView fx:id="enemyImage1" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" />
+                                       </items>
+                                    </SplitPane>
+                                    <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <SplitPane dividerPositions="0.14545454545454545">
+                                             <effect>
+                                                <InnerShadow color="#ffc8c8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Health">
+                                                   <effect>
+                                                      <DropShadow height="50.0" radius="12.0" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="enemyHealthBar2" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="RED" height="50.0" radius="24.5" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.1590909090909091" GridPane.rowIndex="1">
+                                             <effect>
+                                                <InnerShadow color="#c8c8ff" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Essence">
+                                                   <effect>
+                                                      <DropShadow height="50.0" radius="12.0" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="enemyEssenceBar2" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="BLUE" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" GridPane.rowIndex="2">
+                                             <effect>
+                                                <InnerShadow color="#c8ffc8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stamina">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="50.0" radius="12.0" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="enemyStaminaBar2" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="#00c800" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="701.0" minWidth="10.0" prefWidth="400.0" />
+                                       </columnConstraints>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </GridPane>
+                                    <SplitPane>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <items>
+                                          <SplitPane orientation="VERTICAL">
+                                             <effect>
+                                                <InnerShadow />
+                                             </effect>
+                                             <items>
+                                                <VBox alignment="CENTER">
+                                                   <children>
+                                                      <Label fx:id="enemyName1" pickOnBounds="false" text="MoveName" textAlignment="CENTER">
+                                                         <effect>
+                                                            <Glow level="1.0" />
+                                                         </effect>
+                                                         <font>
+                                                            <Font name="Centaur" size="24.0" />
+                                                         </font>
+                                                         <textFill>
+                                                            <LinearGradient endX="1.0" endY="1.0">
+                                                               <stops>
+                                                                  <Stop color="#ff9696" />
+                                                                  <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                  <Stop color="#ff6400" offset="1.0" />
+                                                               </stops>
+                                                            </LinearGradient>
+                                                         </textFill>
+                                                      </Label>
+                                                      <ScrollPane fitToWidth="true" prefViewportHeight="180.0" prefViewportWidth="360.0">
+                                                         <content>
+                                                            <TextFlow prefWidth="355.0" textAlignment="CENTER">
+                                                               <children>
+                                                                  <Text fx:id="enemyLore1" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Lots of information,Lots of information,Lots of information,Lots of information, but you don't have to understand it all right now. Throughout the game more of it will make sense. The game has many small tutorials you will play through. Try looking through some of the stats, they have explanations for all the skills and stats.">
+                                                                     <effect>
+                                                                        <Glow level="1.0" />
+                                                                     </effect>
+                                                                     <fill>
+                                                                        <LinearGradient endX="1.0" endY="1.0">
+                                                                           <stops>
+                                                                              <Stop color="#ff6400" />
+                                                                              <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                              <Stop color="#ff6400" offset="1.0" />
+                                                                           </stops>
+                                                                        </LinearGradient>
+                                                                     </fill>
+                                                                     <font>
+                                                                        <Font name="Centaur" size="20.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="10.0" />
+                                                               </padding>
+                                                            </TextFlow>
+                                                         </content>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </ScrollPane>
+                                                   </children>
+                                                </VBox>
+                                             </items>
+                                          </SplitPane>
+                                       </items>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </SplitPane>
+                                 </items>
+                              </SplitPane>
+                           </content>
+                        </Tab>
+                        <Tab id="enemyThree" fx:id="enemyThree" closable="false" disable="true" text="empty">
+                           <content>
+                              <SplitPane dividerPositions="0.1794425087108014, 0.5513937282229965" prefWidth="1056.0" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <items>
+                                    <SplitPane>
+                                       <items>
+                                          <ImageView fx:id="enemyImage3" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" />
+                                       </items>
+                                    </SplitPane>
+                                    <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <SplitPane dividerPositions="0.14545454545454545">
+                                             <effect>
+                                                <InnerShadow color="#ffc8c8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Health">
+                                                   <effect>
+                                                      <DropShadow height="50.0" radius="12.0" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="enemyHealthBar3" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="RED" height="50.0" radius="24.5" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.1590909090909091" GridPane.rowIndex="1">
+                                             <effect>
+                                                <InnerShadow color="#c8c8ff" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Essence">
+                                                   <effect>
+                                                      <DropShadow height="50.0" radius="12.0" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="enemyEssenceBar3" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="BLUE" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" GridPane.rowIndex="2">
+                                             <effect>
+                                                <InnerShadow color="#c8ffc8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stamina">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="50.0" radius="12.0" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="enemyStaminaBar3" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="#00c800" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="701.0" minWidth="10.0" prefWidth="400.0" />
+                                       </columnConstraints>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </GridPane>
+                                    <SplitPane>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <items>
+                                          <SplitPane orientation="VERTICAL">
+                                             <effect>
+                                                <InnerShadow />
+                                             </effect>
+                                             <items>
+                                                <VBox alignment="CENTER">
+                                                   <children>
+                                                      <Label fx:id="enemyName2" pickOnBounds="false" text="MoveName" textAlignment="CENTER">
+                                                         <effect>
+                                                            <Glow level="1.0" />
+                                                         </effect>
+                                                         <font>
+                                                            <Font name="Centaur" size="24.0" />
+                                                         </font>
+                                                         <textFill>
+                                                            <LinearGradient endX="1.0" endY="1.0">
+                                                               <stops>
+                                                                  <Stop color="#ff9696" />
+                                                                  <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                  <Stop color="#ff6400" offset="1.0" />
+                                                               </stops>
+                                                            </LinearGradient>
+                                                         </textFill>
+                                                      </Label>
+                                                      <ScrollPane fitToWidth="true" prefViewportHeight="180.0" prefViewportWidth="360.0">
+                                                         <content>
+                                                            <TextFlow prefWidth="355.0" textAlignment="CENTER">
+                                                               <children>
+                                                                  <Text fx:id="enemyLore2" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Lots of information,Lots of information,Lots of information,Lots of information, but you don't have to understand it all right now. Throughout the game more of it will make sense. The game has many small tutorials you will play through. Try looking through some of the stats, they have explanations for all the skills and stats.">
+                                                                     <effect>
+                                                                        <Glow level="1.0" />
+                                                                     </effect>
+                                                                     <fill>
+                                                                        <LinearGradient endX="1.0" endY="1.0">
+                                                                           <stops>
+                                                                              <Stop color="#ff6400" />
+                                                                              <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                              <Stop color="#ff6400" offset="1.0" />
+                                                                           </stops>
+                                                                        </LinearGradient>
+                                                                     </fill>
+                                                                     <font>
+                                                                        <Font name="Centaur" size="20.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="10.0" />
+                                                               </padding>
+                                                            </TextFlow>
+                                                         </content>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </ScrollPane>
+                                                   </children>
+                                                </VBox>
+                                             </items>
+                                          </SplitPane>
+                                       </items>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </SplitPane>
+                                 </items>
+                              </SplitPane>
+                           </content>
+                        </Tab>
+                        <Tab id="enemyFour" fx:id="enemyFour" closable="false" disable="true" text="empty">
+                           <content>
+                              <SplitPane dividerPositions="0.1794425087108014, 0.5513937282229965" prefWidth="1056.0" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <items>
+                                    <SplitPane>
+                                       <items>
+                                          <ImageView fx:id="enemyImage3" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" />
+                                       </items>
+                                    </SplitPane>
+                                    <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <SplitPane dividerPositions="0.14545454545454545">
+                                             <effect>
+                                                <InnerShadow color="#ffc8c8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Health">
+                                                   <effect>
+                                                      <DropShadow height="50.0" radius="12.0" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="enemyHealthBar4" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="RED" height="50.0" radius="24.5" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.1590909090909091" GridPane.rowIndex="1">
+                                             <effect>
+                                                <InnerShadow color="#c8c8ff" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Essence">
+                                                   <effect>
+                                                      <DropShadow height="50.0" radius="12.0" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="enemyEssenceBar4" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="BLUE" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" GridPane.rowIndex="2">
+                                             <effect>
+                                                <InnerShadow color="#c8ffc8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stamina">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="50.0" radius="12.0" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="enemyStaminaBar4" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="#00c800" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="701.0" minWidth="10.0" prefWidth="400.0" />
+                                       </columnConstraints>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </GridPane>
+                                    <SplitPane>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <items>
+                                          <SplitPane orientation="VERTICAL">
+                                             <effect>
+                                                <InnerShadow />
+                                             </effect>
+                                             <items>
+                                                <VBox alignment="CENTER">
+                                                   <children>
+                                                      <Label fx:id="enemyName3" pickOnBounds="false" text="MoveName" textAlignment="CENTER">
+                                                         <effect>
+                                                            <Glow level="1.0" />
+                                                         </effect>
+                                                         <font>
+                                                            <Font name="Centaur" size="24.0" />
+                                                         </font>
+                                                         <textFill>
+                                                            <LinearGradient endX="1.0" endY="1.0">
+                                                               <stops>
+                                                                  <Stop color="#ff9696" />
+                                                                  <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                  <Stop color="#ff6400" offset="1.0" />
+                                                               </stops>
+                                                            </LinearGradient>
+                                                         </textFill>
+                                                      </Label>
+                                                      <ScrollPane fitToWidth="true" prefViewportHeight="180.0" prefViewportWidth="360.0">
+                                                         <content>
+                                                            <TextFlow prefWidth="355.0" textAlignment="CENTER">
+                                                               <children>
+                                                                  <Text fx:id="enemyLore3" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Lots of information,Lots of information,Lots of information,Lots of information, but you don't have to understand it all right now. Throughout the game more of it will make sense. The game has many small tutorials you will play through. Try looking through some of the stats, they have explanations for all the skills and stats.">
+                                                                     <effect>
+                                                                        <Glow level="1.0" />
+                                                                     </effect>
+                                                                     <fill>
+                                                                        <LinearGradient endX="1.0" endY="1.0">
+                                                                           <stops>
+                                                                              <Stop color="#ff6400" />
+                                                                              <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                              <Stop color="#ff6400" offset="1.0" />
+                                                                           </stops>
+                                                                        </LinearGradient>
+                                                                     </fill>
+                                                                     <font>
+                                                                        <Font name="Centaur" size="20.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="10.0" />
+                                                               </padding>
+                                                            </TextFlow>
+                                                         </content>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </ScrollPane>
+                                                   </children>
+                                                </VBox>
+                                             </items>
+                                          </SplitPane>
+                                       </items>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </SplitPane>
+                                 </items>
+                              </SplitPane>
+                           </content>
+                        </Tab>
+                        <Tab id="enemyFive" fx:id="enemyFive" closable="false" disable="true" text="empty">
+                           <content>
+                              <SplitPane dividerPositions="0.1794425087108014, 0.5513937282229965" prefWidth="1056.0" BorderPane.alignment="CENTER">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <items>
+                                    <SplitPane>
+                                       <items>
+                                          <ImageView fx:id="enemyImage4" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" />
+                                       </items>
+                                    </SplitPane>
+                                    <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <SplitPane dividerPositions="0.14545454545454545">
+                                             <effect>
+                                                <InnerShadow color="#ffc8c8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Health">
+                                                   <effect>
+                                                      <DropShadow height="50.0" radius="12.0" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="enemyHealthBar5" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="RED" height="50.0" radius="24.5" width="50.0" />
+                                                   </effect>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.1590909090909091" GridPane.rowIndex="1">
+                                             <effect>
+                                                <InnerShadow color="#c8c8ff" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Essence">
+                                                   <effect>
+                                                      <DropShadow height="50.0" radius="12.0" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="enemyEssenceBar5" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="BLUE" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" GridPane.rowIndex="2">
+                                             <effect>
+                                                <InnerShadow color="#c8ffc8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <items>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stamina">
+                                                   <effect>
+                                                      <DropShadow blurType="GAUSSIAN" height="50.0" radius="12.0" width="0.0" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Centaur" size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Slider fx:id="enemyStaminaBar5" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                                   <effect>
+                                                      <InnerShadow choke="1.0" color="#00c800" radius="17.25" width="50.0" />
+                                                   </effect>
+                                                </Slider>
+                                             </items>
+                                          </SplitPane>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="701.0" minWidth="10.0" prefWidth="400.0" />
+                                       </columnConstraints>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </GridPane>
+                                    <SplitPane>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <items>
+                                          <SplitPane orientation="VERTICAL">
+                                             <effect>
+                                                <InnerShadow />
+                                             </effect>
+                                             <items>
+                                                <VBox alignment="CENTER">
+                                                   <children>
+                                                      <Label fx:id="enemyName4" pickOnBounds="false" text="MoveName" textAlignment="CENTER">
+                                                         <effect>
+                                                            <Glow level="1.0" />
+                                                         </effect>
+                                                         <font>
+                                                            <Font name="Centaur" size="24.0" />
+                                                         </font>
+                                                         <textFill>
+                                                            <LinearGradient endX="1.0" endY="1.0">
+                                                               <stops>
+                                                                  <Stop color="#ff9696" />
+                                                                  <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                  <Stop color="#ff6400" offset="1.0" />
+                                                               </stops>
+                                                            </LinearGradient>
+                                                         </textFill>
+                                                      </Label>
+                                                      <ScrollPane fitToWidth="true" prefViewportHeight="180.0" prefViewportWidth="360.0">
+                                                         <content>
+                                                            <TextFlow prefWidth="355.0" textAlignment="CENTER">
+                                                               <children>
+                                                                  <Text fx:id="enemyLore4" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Lots of information,Lots of information,Lots of information,Lots of information, but you don't have to understand it all right now. Throughout the game more of it will make sense. The game has many small tutorials you will play through. Try looking through some of the stats, they have explanations for all the skills and stats.">
+                                                                     <effect>
+                                                                        <Glow level="1.0" />
+                                                                     </effect>
+                                                                     <fill>
+                                                                        <LinearGradient endX="1.0" endY="1.0">
+                                                                           <stops>
+                                                                              <Stop color="#ff6400" />
+                                                                              <Stop color="#ff961e" offset="0.007662835249042145" />
+                                                                              <Stop color="#ff6400" offset="1.0" />
+                                                                           </stops>
+                                                                        </LinearGradient>
+                                                                     </fill>
+                                                                     <font>
+                                                                        <Font name="Centaur" size="20.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="10.0" />
+                                                               </padding>
+                                                            </TextFlow>
+                                                         </content>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </ScrollPane>
+                                                   </children>
+                                                </VBox>
+                                             </items>
+                                          </SplitPane>
+                                       </items>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </SplitPane>
+                                 </items>
+                              </SplitPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+                  <VBox alignment="CENTER" GridPane.columnIndex="1">
+                     <children>
+                        <Label fx:id="battleLogTitle" text="Battle Log">
+                           <effect>
+                              <Glow level="0.95" />
+                           </effect>
+                           <font>
+                              <Font name="Centaur" size="26.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="RED" />
+                                    <Stop color="#ff961e" offset="0.007662835249042145" />
+                                    <Stop color="#fa6400" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <ScrollPane fx:id="battleLogScroll" fitToWidth="true" prefHeight="583.0" prefViewportHeight="500.0" prefViewportWidth="165.0" prefWidth="165.0">
+                           <content>
+                              <TextFlow prefHeight="200.0" prefWidth="180.0">
+                                 <children>
+                                    <Text fx:id="battleLog" strokeType="OUTSIDE" strokeWidth="0.0" text="Battle Log">
+                                       <effect>
+                                          <Glow level="1.0" />
+                                       </effect>
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#ff961e" />
+                                                <Stop color="#ff6400" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                       <font>
+                                          <Font name="Centaur" size="18.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </TextFlow>
+                           </content>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </ScrollPane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="-230.0" />
+                     </GridPane.margin>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </GridPane>
+         </items>
+      </SplitPane>
+   </center>
+</BorderPane>

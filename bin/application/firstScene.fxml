@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.firstActFirstSceneController">
+   <center>
+      <TextFlow prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#d5d771" fontSmoothingType="LCD" opacity="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Large towers of an obsidian color surround me. They stab into the cloudy sky, and eventually blot it out with sheer number. Formaldehyde sifts from a nearby shop, and I can feel trash covering my body. A sickly, yellow light filters through the lamps and streetlights to blanket me. I sigh as I lay there, but the impossible happens, a voice speaks to me from within my head. It says...">
+               <font>
+                  <Font name="Centaur" size="36.0" />
+               </font>
+               <effect>
+                  <DropShadow height="19.82" radius="6.2125" spread="0.81" width="7.03" />
+               </effect>
+            </Text>
+         </children>
+      </TextFlow>
+   </center>
+   <padding>
+      <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
+   </padding>
+   <effect>
+      <InnerShadow choke="0.5" height="100.0" radius="37.0" width="50.0" />
+   </effect>
+   <bottom>
+      <FlowPane fx:id="FP" alignment="BOTTOM_CENTER" columnHalignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="getUp" mnemonicParsing="false" onAction="#getUp" text="Get up." textAlignment="CENTER" textFill="#5a0000" wrapText="true">
+               <font>
+                  <Font name="Centaur" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="255.0" radius="80.3" spread="0.31" width="68.2">
+                     <input>
+                        <DropShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </Button>
+         </children>
+         <effect>
+            <InnerShadow choke="0.27" height="106.75" radius="52.1325" width="103.78" />
+         </effect>
+      </FlowPane>
+   </bottom>
+</BorderPane>

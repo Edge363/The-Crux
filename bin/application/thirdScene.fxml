@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.firstActThirdSceneController">
+     <effect>
+                  <InnerShadow choke="0.35" color="#640000" height="50.0" radius="24.5" width="50.0" />
+               </effect>
+   <bottom>
+      <VBox fx:id="VB" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="getUp" mnemonicParsing="false" onAction="#getUp" text="Sorry! I didn't mean to yell, but you aren't listening. I''m telling you this for your own good. You need to start living again, and I think I can help." textAlignment="CENTER" textFill="#5a0000" wrapText="true">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="161.6" radius="68.07" spread="0.31" width="112.68">
+                     <input>
+                        <DropShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+               <font>
+                  <Font name="Centaur" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="getUpTwo" mnemonicParsing="false" onAction="#getUpTwo" text="You're pathetic. So full of talent, but you're here sleeping in garbage. Why? Is it that fun being so pathetic?" textAlignment="CENTER" textFill="#5a0000" wrapText="true">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="161.6" radius="80.67" spread="0.31" width="163.08">
+                     <input>
+                        <DropShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+               <font>
+                  <Font name="Centaur" size="24.0" />
+               </font>
+            </Button>
+         </children>
+         <effect>
+            <InnerShadow choke="0.17" height="92.91" radius="65.785" width="172.23" />
+         </effect>
+      </VBox>
+   </bottom>
+   <padding>
+      <Insets left="100.0" right="100.0" top="100.0" />
+   </padding>
+   <effect>
+      <InnerShadow choke="0.27" height="97.85" radius="51.39" width="109.71" />
+   </effect>
+   <center>
+      <TextFlow prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#d5d771" fontSmoothingType="LCD" opacity="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stop yelling. Okay, fine. I'm up now,  what do you want ?">
+               <effect>
+                  <DropShadow height="19.82" radius="6.2125" spread="0.81" width="7.03" />
+               </effect>
+               <font>
+                  <Font name="Centaur" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+   </center>
+</BorderPane>

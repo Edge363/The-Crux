@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.wonBattleController">
+   <center>
+      <SplitPane prefWidth="1056.0" BorderPane.alignment="CENTER">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <items>
+            <SplitPane prefHeight="200.0" prefWidth="595.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <items>
+                  <SplitPane centerShape="false" dividerPositions="0.08759124087591241, 0.8211678832116789" orientation="VERTICAL" prefHeight="234.0" prefWidth="389.0" scaleShape="false">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                     <items>
+                        <Label fx:id="explanationTitle" pickOnBounds="false" text="You won!" textAlignment="CENTER">
+                           <effect>
+                              <Glow level="1.0" />
+                           </effect>
+                           <font>
+                              <Font name="Centaur" size="36.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="#640000" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <TextFlow textAlignment="CENTER">
+                           <children>
+                              <Text fx:id="explanation" strokeType="OUTSIDE" strokeWidth="0.0" text="Lots of information, but you don't have to understand it all right now. Throughout the game more of it will make sense. The game has many small tutorials you will play through. Try looking through some of the stats, they have explanations for all the skills and stats." textAlignment="CENTER" wrappingWidth="892.4765625">
+                                 <effect>
+                                    <Glow level="1.0" />
+                                 </effect>
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#960000" />
+                                          <Stop color="#1e0000" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                                 <font>
+                                    <Font name="Centaur" size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets left="100.0" right="100.0" top="50.0" />
+                           </padding>
+                        </TextFlow>
+                        <SplitPane dividerPositions="0.5">
+                           <items>
+                              <SplitPane>
+                                 <items>
+                                    <SplitPane dividerPositions="0.14545454545454545">
+                                       <effect>
+                                          <InnerShadow color="#00c8c8" height="50.0" radius="24.5" width="50.0" />
+                                       </effect>
+                                       <items>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Experience">
+                                             <effect>
+                                                <DropShadow height="50.0" radius="12.0" width="0.0" />
+                                             </effect>
+                                             <font>
+                                                <Font name="Centaur" size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <Slider fx:id="experienceBar" blockIncrement="1.0" majorTickUnit="10.0" mouseTransparent="true" showTickLabels="true" value="100.0">
+                                             <effect>
+                                                <InnerShadow choke="1.0" color="#00c8c8" height="50.0" radius="24.5" width="50.0" />
+                                             </effect>
+                                             <padding>
+                                                <Insets left="15.0" right="15.0" />
+                                             </padding>
+                                          </Slider>
+                                       </items>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </SplitPane>
+                                 </items>
+                              </SplitPane>
+                              <Button fx:id="getUp" mnemonicParsing="false" onAction="#getUp" prefHeight="102.0" prefWidth="156.0" text="Back to town" textAlignment="CENTER">
+                                 <effect>
+                                    <InnerShadow choke="0.35" color="#640000" height="50.0" radius="24.5" width="50.0" />
+                                 </effect>
+                                 <font>
+                                    <Font name="Centaur" size="24.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#640000" />
+                                          <Stop color="BLACK" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Button>
+                           </items>
+                        </SplitPane>
+                     </items>
+                     <padding>
+                        <Insets bottom="6.0" top="10.0" />
+                     </padding>
+                  </SplitPane>
+               </items>
+               <padding>
+                  <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+               </padding>
+            </SplitPane>
+         </items>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </SplitPane>
+   </center>
+</BorderPane>

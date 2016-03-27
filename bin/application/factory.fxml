@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.factoryController">
+   <effect>
+      <InnerShadow choke="0.2" height="120.0" radius="59.5" width="120.0" />
+   </effect>
+   <padding>
+      <Insets left="100.0" right="100.0" top="100.0" />
+   </padding>
+   <left>
+      <VBox maxWidth="300.0" prefHeight="427.0" prefWidth="300.0" spacing="50.0">
+         <children>
+            <TextFlow maxWidth="300.0" prefWidth="300.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fx:id="cleaveTalk" fill="#d5d771" fontSmoothingType="LCD" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="So-sorry boss. I thought today was my day off...">
+                     <effect>
+                        <DropShadow height="19.82" radius="6.2125" spread="0.81" width="7.03" />
+                     </effect>
+                     <font>
+                        <Font name="Centaur" size="36.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <Button fx:id="getUp" mnemonicParsing="false" onAction="#getUp" pickOnBounds="false" text="...." textFill="#640000" wrapText="true">
+               <effect>
+                  <InnerShadow choke="0.35" height="50.0" radius="24.5" width="50.0" />
+               </effect>
+               <font>
+                  <Font name="Centaur" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="getUpTwo" mnemonicParsing="false" onAction="#getUpTwo" opacity="0.0" text="I said. Get up." wrapText="true">
+               <effect>
+                  <InnerShadow choke="0.35" color="#640000" height="50.0" radius="24.5" width="50.0" />
+               </effect>
+               <font>
+                  <Font name="Centaur" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <TextFlow maxWidth="300.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="bossTalk" fill="#6de173" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Cleave! Why didn't you come in today?">
+               <effect>
+                  <DropShadow height="19.82" radius="6.2125" spread="0.81" width="7.03" />
+               </effect>
+               <font>
+                  <Font name="Centaur" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+   </right>
+</BorderPane>

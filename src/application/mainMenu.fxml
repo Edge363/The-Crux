@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="mainMenu" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.mainMenuController">
+   <bottom>
+      <VBox fx:id="VB2" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="startButton" mnemonicParsing="false" onAction="#showMainMenu" text="Start">
+               <effect>
+                  <InnerShadow choke="0.24" height="69.65" radius="32.8425" width="63.72" />
+               </effect>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.2571428571428571" startX="0.5">
+                     <stops>
+                        <Stop color="#5a0000" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font name="Centaur" size="18.0" />
+               </font>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow height="200.0" radius="99.5" spread="0.6" width="200.0" />
+         </effect>
+      </VBox>
+   </bottom>
+   <effect>
+      <InnerShadow choke="0.2" height="71.41" radius="30.7575" width="53.62" />
+   </effect>
+</BorderPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" opacity="1.0" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.secondMainMenuController">
+   <right>
+      <VBox fx:id="vB" alignment="CENTER_RIGHT" opacity="0.0" prefHeight="650.0" prefWidth="275.0" spacing="20.0">
+         <children>
+            <Text fx:id="theCrux" opacity="0.9" strokeType="OUTSIDE" strokeWidth="0.0" text="The Crux">
+               <font>
+                  <Font name="Centaur" size="48.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="0.6952380952380952" endY="0.6952380952380952" startX="0.5238095238095238" startY="0.5571428571428572">
+                     <stops>
+                        <Stop color="#c8141e" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <effect>
+                  <DropShadow height="9.14" radius="6.2325" spread="0.34" width="17.79" />
+               </effect>
+            </Text>
+            <Button fx:id="newGameButton" mnemonicParsing="false" onAction="#startGame" opacity="0.66" text="New Game">
+               <font>
+                  <Font name="Centaur" size="24.0" />
+               </font>
+               <effect>
+                  <InnerShadow choke="0.4" height="50.0" radius="24.5" width="50.0" />
+               </effect>
+            </Button>
+            <Button fx:id="loadGameButton" mnemonicParsing="false" opacity="0.66" text="Load Game">
+               <font>
+                  <Font name="Centaur" size="24.0" />
+               </font>
+               <effect>
+                  <InnerShadow choke="0.4" height="50.0" radius="24.5" width="50.0" />
+               </effect>
+            </Button>
+            <Button fx:id="optionsButton" mnemonicParsing="false" opacity="0.66" text="Options">
+               <font>
+                  <Font name="Centaur" size="24.0" />
+               </font>
+               <effect>
+                  <InnerShadow choke="0.4" height="50.0" radius="24.5" width="50.0" />
+               </effect>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets bottom="200.0" left="50.0" />
+         </BorderPane.margin>
+         <effect>
+            <DropShadow height="100.0" radius="24.5" spread="0.5" width="0.0" />
+         </effect>
+      </VBox>
+   </right>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets right="150.0" />
+   </padding>
+   <effect>
+      <InnerShadow choke="0.5" height="75.0" radius="30.75" width="50.0" />
+   </effect>
+   <left>
+      <MediaView fx:id="sound" fitHeight="200.0" fitWidth="200.0" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

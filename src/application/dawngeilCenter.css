@@ -1,0 +1,10 @@
+.root {
+    
+    -fx-background-image: url("dawnGeilCenter.jpg");
+    	
+}
+.attack {
+  -fx-background-color: red;
+  -fx-text-fill: white;
+  -fx-background-radius: 16px;
+}

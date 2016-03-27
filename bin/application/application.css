@@ -1,0 +1,99 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root {
+    
+    -fx-background-image: url("Maple.jpg");
+    
+}
+
+.button {
+
+  -fx-background-color: 
+        linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),
+        linear-gradient(#020b02, #3a3a3a),
+        linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%),
+        linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%),
+        linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);
+    -fx-background-insets: 0,1,4,5,6;
+    -fx-background-radius: 9,8,5,4,3;
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
+}
+
+.list-cell { -fx-text-fill: rgb(255,150,30); /* 5 */ }
+
+.v-box{
+-fx-border-radius: 15px 15px 15px 15px;
+-fx-background-radius: 15px 15px 15px 15px;
+}
+
+.split-pane *.split-pane-divider {
+    -fx-padding: 1 0 1 0;
+}
+
+.tab {
+-fx-background-color: linear-gradient(to top, -fx-base, derive(-fx-base,40%));
+}
+
+.split-pane {
+-fx-background-color:
+        linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),
+        linear-gradient(#020b02, #3a3a3a),
+        linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%),
+        linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%),
+        linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);
+-fx-background-radius: 20px;
+-fx-background-radius: 20px;
+-fx-border-radius: 20px;
+  /* top-left, top-right, bottom-right, and bottom-left corners, in that order. */
+}
+
+.grid-pane {
+-fx-background-color:
+        linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),
+        linear-gradient(#020b02, #3a3a3a),
+        linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%),
+        linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%),
+        linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);
+-fx-background-radius: 20px;
+-fx-background-radius: 20px;
+-fx-border-radius: 20px;
+  /* top-left, top-right, bottom-right, and bottom-left corners, in that order. */
+}
+
+.image-view {
+-fx-border-radius: 15px 15px 15px 15px;
+-fx-background-radius: 15px 15px 15px 15px;
+}
+.list-cell:odd {    
+	-fx-background-color: rgb(70,70,70); /* 2 */
+    -fx-text-fill: rgb(255,150,30); /* 5 */
+     }
+.list-cell:even {   
+	-fx-background-color: rgb(70,70,70); /* 2 */
+    -fx-text-fill: rgb(255,150,30); /* 5 */ 
+    }
+.list-cell:filled:hover { 
+    -fx-background-color: rgb(255,150,30); /* 2 */
+    -fx-text-fill: rgb(70,70,70); /* 5 */
+}
+.list-cell:filled:selected:focused, .list-cell:filled:selected { 
+    -fx-background-color: rgb(255,150,30); /* 2 */
+    -fx-text-fill: rgb(70,70,70); /* 5 */
+}
+.list-view {
+
+-fx-background-radius: 15px 15px 15px 15px;
+-fx-background-color: rgb(70,70,70);
+}
+
+.scroll-pane .viewport {
+	
+	-fx-background-color:rgb(70,70,70);
+       
+}
+.text-flow {
+	-fx-background-color:rgb(70,70,70);
+}
+.scroll-pane {
+	-fx-background-color: derive(rgb(108,108,108),15%);
+-fx-border-radius:15px 15px 15px 15px ;
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.SplitPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.dawngeilCenterController">
+   <children>
+      <TextFlow layoutX="309.0" layoutY="-261.0" prefHeight="200.0" prefWidth="200.0" textAlignment="CENTER" />
+      <Text fill="#d5d771" fontSmoothingType="LCD" layoutX="323.0" layoutY="159.0" opacity="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The metropolis of Dawngeil">
+         <effect>
+            <DropShadow height="19.82" radius="6.2125" spread="0.81" width="7.03" />
+         </effect>
+         <font>
+            <Font name="Centaur" size="36.0" />
+         </font>
+      </Text>
+      <Button fx:id="playerStatMenuButton" layoutX="967.0" layoutY="519.0" mnemonicParsing="false" onAction="#openPlayerMenu" text="Player Stat Menu">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#640000" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="playerItemMenu" layoutX="967.0" layoutY="585.0" mnemonicParsing="false" text="Player Item Menu">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#640000" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="goShop" layoutX="323.0" layoutY="473.0" mnemonicParsing="false" onAction="#goShop" text="Go to the shop." textFill="#640000">
+         <effect>
+            <InnerShadow choke="0.35" height="50.0" radius="24.5" width="50.0" />
+         </effect>
+         <font>
+            <Font name="Centaur" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="layDown" layoutX="14.0" layoutY="588.0" mnemonicParsing="false" onAction="#layDown" text="Lay back down." textFill="#640000">
+         <effect>
+            <InnerShadow choke="0.35" height="50.0" radius="24.5" width="50.0" />
+         </effect>
+         <font>
+            <Font name="Centaur" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="goHome" layoutX="77.0" layoutY="325.0" mnemonicParsing="false" onAction="#goHome" text="Go Home." textFill="#640000">
+         <effect>
+            <InnerShadow choke="0.35" height="50.0" radius="24.5" width="50.0" />
+         </effect>
+         <font>
+            <Font name="Centaur" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="goWork" layoutX="717.0" layoutY="499.0" mnemonicParsing="false" onAction="#goWork" text="Go to work." textFill="#640000">
+         <effect>
+            <InnerShadow choke="0.35" height="50.0" radius="24.5" width="50.0" />
+         </effect>
+         <font>
+            <Font name="Centaur" size="24.0" />
+         </font>
+      </Button>
+   </children>
+   <effect>
+      <InnerShadow height="50.0" radius="24.5" width="50.0" />
+   </effect>
+</AnchorPane>

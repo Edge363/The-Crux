@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.gameOverController">
+   <bottom>
+      <VBox fx:id="VB" alignment="CENTER" prefHeight="201.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="getUp" mnemonicParsing="false" onAction="#getUp" text="I said, get up">
+               <effect>
+                  <InnerShadow choke="0.35" color="#640000" height="50.0" radius="24.5" width="50.0" />
+               </effect>
+               <font>
+                  <Font name="Centaur" size="24.0" />
+               </font>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow color="#640000" height="100.0" radius="49.5" spread="0.22" width="100.0" />
+         </effect>
+      </VBox>
+   </bottom>
+   <center>
+      <TextFlow prefHeight="200.0" prefWidth="200.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="text" fill="#d5d771" fontSmoothingType="LCD" opacity="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tired? So am I. I just wanna lay down, and give in..." textAlignment="CENTER">
+               <effect>
+                  <DropShadow height="19.82" radius="6.2125" spread="0.81" width="7.03" />
+               </effect>
+               <font>
+                  <Font name="Centaur" size="36.0" />
+               </font>
+            </Text>
+         </children>
+         <BorderPane.margin>
+            <Insets left="50.0" right="50.0" top="50.0" />
+         </BorderPane.margin>
+      </TextFlow>
+   </center>
+</BorderPane>

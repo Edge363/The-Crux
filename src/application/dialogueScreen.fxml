@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="650.0" prefWidth="1200.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <items>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <SplitPane centerShape="false" dividerPositions="0.5893854748603352" layoutY="324.0" orientation="VERTICAL" scaleShape="false">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <items>
+                  <SplitPane prefWidth="500.0">
+                     <items>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label fx:id="explanationTitle" pickOnBounds="false" text="MoveName" textAlignment="CENTER">
+                                 <effect>
+                                    <Glow level="1.0" />
+                                 </effect>
+                                 <font>
+                                    <Font name="Centaur" size="24.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#00fa96" />
+                                          <Stop color="#00fa96" offset="0.007662835249042145" />
+                                          <Stop color="#0096fa" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                              <ScrollPane fitToWidth="true" prefHeight="160.0" prefViewportHeight="180.0" prefWidth="487.0">
+                                 <content>
+                                    <TextFlow prefWidth="355.0" textAlignment="CENTER">
+                                       <children>
+                                          <Text fx:id="explanation" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Lots of information,Lots of information,Lots of information,Lots of information, but you don't have to understand it all right now. Throughout the game more of it will make sense. The game has many small tutorials you will play through. Try looking through some of the stats, they have explanations for all the skills and stats.">
+                                             <effect>
+                                                <Glow level="1.0" />
+                                             </effect>
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="#00fa96" />
+                                                      <Stop color="#0096fa" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                             <font>
+                                                <Font name="Centaur" size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </TextFlow>
+                                 </content>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ScrollPane>
+                           </children>
+                           <padding>
+                              <Insets left="8.0" right="5.0" />
+                           </padding>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+                  <HBox alignment="TOP_RIGHT" fillHeight="false" prefHeight="132.0" prefWidth="357.0" spacing="10.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5">
+                           <items>
+                              <ListView fx:id="enemyList" maxWidth="1.7976931348623157E308" onMouseClicked="#playSound" prefHeight="80.0" prefWidth="474.0" SplitPane.resizableWithParent="false">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                                 </HBox.margin>
+                              </ListView>
+                              <Button fx:id="moveName" mnemonicParsing="false" onAction="#attack" prefWidth="90.0" text="Attack" wrapText="true">
+                                 <effect>
+                                    <InnerShadow choke="0.1" height="20.0" radius="17.0" width="50.0" />
+                                 </effect>
+                                 <font>
+                                    <Font name="Centaur" size="16.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#00fa96" />
+                                          <Stop color="#00c8fa" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Button>
+                           </items>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </SplitPane>
+                     </children>
+                  </HBox>
+               </items>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </SplitPane>
+            <SplitPane layoutX="698.0" layoutY="373.0" prefWidth="500.0">
+               <items>
+                  <VBox alignment="CENTER" layoutX="378.0" layoutY="14.0">
+                     <children>
+                        <Label fx:id="name" pickOnBounds="false" text="MoveName" textAlignment="CENTER">
+                           <effect>
+                              <Glow level="1.0" />
+                           </effect>
+                           <font>
+                              <Font name="Centaur" size="24.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#00fa96" />
+                                    <Stop color="#00fa96" offset="0.007662835249042145" />
+                                    <Stop color="#0096fa" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <ScrollPane fitToWidth="true" prefHeight="220.0" prefViewportHeight="180.0" prefViewportWidth="360.0" prefWidth="586.0">
+                           <content>
+                              <TextFlow prefWidth="355.0" textAlignment="CENTER">
+                                 <children>
+                                    <Text fx:id="explanation1" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Lots of information,Lots of information,Lots of information,Lots of information, but you don't have to understand it all right now. Throughout the game more of it will make sense. The game has many small tutorials you will play through. Try looking through some of the stats, they have explanations for all the skills and stats.">
+                                       <effect>
+                                          <Glow level="1.0" />
+                                       </effect>
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#00fa96" />
+                                                <Stop color="#0096fa" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                       <font>
+                                          <Font name="Centaur" size="20.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </TextFlow>
+                           </content>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ScrollPane>
+                     </children>
+                     <padding>
+                        <Insets left="8.0" />
+                     </padding>
+                  </VBox>
+               </items>
+               <padding>
+                  <Insets bottom="15.0" left="3.0" right="10.0" top="10.0" />
+               </padding>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

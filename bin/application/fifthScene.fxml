@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.SplitPane?>
+
+<SplitPane prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.characterCreationController">
+   <items>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" GridPane.rowIndex="1">
+               <items>
+                  <Label text="Capitalist">
+                     <effect>
+                        <DropShadow height="23.97" radius="5.4925" spread="0.03" width="0.0" />
+                     </effect>
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" SplitPane.resizableWithParent="false">
+                    <items>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cleave will be the best bussiness man who's ever existed. We will crush the sands of time with gold, and use the glass to cut and encase our foes. Time and again we'll take the risks and come out on top." wrappingWidth="300.0">
+                           <font>
+                              <Font name="Centaur" size="18.0" />
+                           </font>
+                        </Text>
+                        <VBox alignment="CENTER" prefHeight="172.0" prefWidth="42.0">
+                           <children>
+                              <Button fx:id="capitalist" mnemonicParsing="false" onAction="#makeCapitalist" text="Capitalist" textFill="#3b39ab">
+                                 <effect>
+                                    <InnerShadow choke="0.09" height="35.83" radius="17.415" width="35.83" />
+                                 </effect>
+                                 <font>
+                                    <Font name="Centaur" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <effect>
+                              <DropShadow height="59.55" radius="29.275" spread="0.27" width="59.55" />
+                           </effect>
+                        </VBox>
+                    </items>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </SplitPane>
+               </items>
+            </SplitPane>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" GridPane.rowIndex="2">
+               <items>
+                  <Label text="Assasin">
+                     <effect>
+                        <DropShadow height="23.97" radius="5.4925" spread="0.03" width="0.0" />
+                     </effect>
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+                    <items>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Eventually Cleave will accept his fate and drown himself in blood. I can't wait to see him slowly start to love it. I know we will poison, shock, and stab our way to the very pinnacle of existence...." wrappingWidth="300.0">
+                           <font>
+                              <Font name="Centaur" size="18.0" />
+                           </font>
+                        </Text>
+                        <VBox alignment="CENTER" prefHeight="172.0" prefWidth="42.0">
+                           <children>
+                              <Button fx:id="assassin" mnemonicParsing="false" onAction="#makeAssassin" text="Assassin" textFill="#3b39ab">
+                                 <effect>
+                                    <InnerShadow choke="0.09" height="35.83" radius="17.415" width="35.83" />
+                                 </effect>
+                                 <font>
+                                    <Font name="Centaur" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <effect>
+                              <DropShadow height="59.55" radius="29.275" spread="0.27" width="59.55" />
+                           </effect>
+                        </VBox>
+                    </items>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </SplitPane>
+               </items>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </SplitPane>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <items>
+                  <Label text="Brute">
+                     <effect>
+                        <DropShadow height="23.97" radius="5.4925" spread="0.03" width="0.0" />
+                     </effect>
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+                    <items>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cleave's soft heart will grow hard from slowly killing, and even more slowly being killed. He will tame beasts, and hone great armor, all in the name of destroying his enemies." wrappingWidth="300.0">
+                           <font>
+                              <Font name="Centaur" size="18.0" />
+                           </font>
+                        </Text>
+                        <VBox alignment="CENTER" prefHeight="172.0" prefWidth="42.0">
+                           <children>
+                              <Button fx:id="brute" mnemonicParsing="false" onAction="#makeBrute" text="Brute" textFill="#3b39ab">
+                                 <effect>
+                                    <InnerShadow choke="0.09" height="35.83" radius="17.415" width="35.83" />
+                                 </effect>
+                                 <font>
+                                    <Font name="Centaur" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <effect>
+                              <DropShadow height="59.55" radius="29.275" spread="0.27" width="59.55" />
+                           </effect>
+                        </VBox>
+                    </items>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </SplitPane>
+               </items>
+            </SplitPane>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" GridPane.columnIndex="1">
+               <items>
+                  <Label text="Arcanist">
+                     <effect>
+                        <DropShadow height="23.97" radius="5.4925" spread="0.03" width="0.0" />
+                     </effect>
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+                    <items>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="He'll fight with a shattered mind, a broken psychy, and detestable beasts. The power of the land will flow through his veins, and disentegrate his foes. Only the greatest warriors will be able to even reach him. Beasts from all corners of the land will kill all who get that far." wrappingWidth="300.0">
+                           <font>
+                              <Font name="Centaur" size="18.0" />
+                           </font>
+                        </Text>
+                        <VBox alignment="CENTER" prefHeight="172.0" prefWidth="42.0">
+                           <children>
+                              <Button fx:id="arcanist" mnemonicParsing="false" onAction="#makeArcanist" text="Arcanist" textFill="#3b39ab">
+                                 <effect>
+                                    <InnerShadow choke="0.09" height="35.83" radius="17.415" width="35.83" />
+                                 </effect>
+                                 <font>
+                                    <Font name="Centaur" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <effect>
+                              <DropShadow height="59.55" radius="29.275" spread="0.27" width="59.55" />
+                           </effect>
+                        </VBox>
+                    </items>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </SplitPane>
+               </items>
+            </SplitPane>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <items>
+                  <Label text="Jack of All Trades">
+                     <effect>
+                        <DropShadow height="23.97" radius="5.4925" spread="0.03" width="0.0" />
+                     </effect>
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+                    <items>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cleave will be the master of all. He will  build anything oruse anything in his conquest of the world. The lack of focus will hurt and help us throughout the journey, but in the end...No one will be able to stop him." wrappingWidth="300.0">
+                           <font>
+                              <Font name="Centaur" size="18.0" />
+                           </font>
+                        </Text>
+                        <VBox alignment="CENTER" prefHeight="172.0" prefWidth="42.0">
+                           <children>
+                              <Button fx:id="jack" mnemonicParsing="false" onAction="#makeJack" text="Jack of All Trades" textFill="#3b39ab">
+                                 <effect>
+                                    <InnerShadow choke="0.09" height="35.83" radius="17.415" width="35.83" />
+                                 </effect>
+                                 <font>
+                                    <Font name="Centaur" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <effect>
+                              <DropShadow height="59.55" radius="29.275" spread="0.27" width="59.55" />
+                           </effect>
+                        </VBox>
+                    </items>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </SplitPane>
+               </items>
+            </SplitPane>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+               <items>
+                  <Label text="Warlord">
+                     <effect>
+                        <DropShadow height="23.97" radius="5.4925" spread="0.03" width="0.0" />
+                     </effect>
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Label>
+                  <SplitPane dividerPositions="0.5153061224489796" prefHeight="160.0" prefWidth="200.0">
+                     <items>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="He'll focus on fighting with his strength and charisma. He'll plan to overwhelm his enemies with raw power and numbers.  I expect him to make his own friends and weapons. He'll be beaten, but he'll be able to take it." textAlignment="CENTER" wrappingWidth="300.0">
+                           <font>
+                              <Font name="Centaur" size="18.0" />
+                           </font>
+                        </Text>
+                        <VBox alignment="CENTER" prefHeight="172.0" prefWidth="42.0">
+                           <children>
+                              <Button fx:id="warlord" mnemonicParsing="false" onAction="#makeWarlord" text="Warlord" textFill="#3b39ab">
+                                 <font>
+                                    <Font name="Centaur" size="18.0" />
+                                 </font>
+                                 <effect>
+                                    <InnerShadow choke="0.09" height="35.83" radius="17.415" width="35.83" />
+                                 </effect>
+                              </Button>
+                           </children>
+                           <effect>
+                              <DropShadow height="59.55" radius="29.275" spread="0.27" width="59.55" />
+                           </effect>
+                        </VBox>
+                     </items>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </SplitPane>
+               </items>
+            </SplitPane>
+         </children>
+      </GridPane>
+   </items>
+   <effect>
+      <InnerShadow choke="0.35" color="#2c0000" height="101.06" radius="52.2525" width="109.95" />
+   </effect>
+</SplitPane>

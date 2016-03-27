@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.SplitPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.firstActSixthSceneController">
+   <bottom>
+      <VBox fx:id="VB" alignment="CENTER" prefHeight="201.0" prefWidth="377.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="VB2" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="name" maxWidth="300.0" onAction="#revealButton" prefWidth="300.0" />
+               </children>
+            </VBox>
+            <VBox fx:id="VB3" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="getUp" mnemonicParsing="false" onAction="#getUp" text="Hahaha! Doesn't matter where I came from." textFill="#640000" wrapText="true">
+                     <effect>
+                        <InnerShadow choke="0.35" height="50.0" radius="24.5" width="50.0" />
+                     </effect>
+                     <font>
+                        <Font name="Centaur" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow height="100.0" radius="49.5" spread="0.22" width="100.0" />
+         </effect>
+      </VBox>
+   </bottom>
+   <center>
+      <TextFlow prefHeight="200.0" prefWidth="200.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#d5d771" fontSmoothingType="LCD" opacity="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What? I guess... I don't really care anymore...It's all lost... What is your name? And how do I even get started? ">
+               <effect>
+                  <DropShadow height="19.82" radius="6.2125" spread="0.81" width="7.03" />
+               </effect>
+               <font>
+                  <Font name="Centaur" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+   </center>
+   <effect>
+      <InnerShadow choke="0.2" height="120.0" radius="59.5" width="120.0" />
+   </effect>
+   <padding>
+      <Insets left="100.0" right="100.0" top="100.0" />
+   </padding>
+</BorderPane>

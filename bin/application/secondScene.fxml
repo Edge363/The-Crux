@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.firstActSecondSceneController">
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="201.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="getUp" mnemonicParsing="false" onAction="#getUp" text="I said, get up">
+               <font>
+                  <Font name="Centaur" size="24.0" />
+               </font>
+               <effect>
+                  <InnerShadow choke="0.35" color="#640000" height="50.0" radius="24.5" width="50.0" />
+               </effect>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow color="#640000" height="100.0" radius="49.5" spread="0.22" width="100.0" />
+         </effect>
+      </VBox>
+   </bottom>
+   <opaqueInsets>
+      <Insets left="50.0" right="50.0" />
+   </opaqueInsets>
+   <padding>
+      <Insets left="100.0" right="100.0" top="100.0" />
+   </padding>
+   <center>
+      <TextFlow prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#d5d771" fontSmoothingType="LCD" opacity="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Haha. I've hit an all time low. Laying in trash, talking to myself...">
+               <effect>
+                  <DropShadow height="19.82" radius="6.2125" spread="0.81" width="7.03" />
+               </effect>
+               <font>
+                  <Font name="Centaur" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+   </center>
+   <effect>
+      <InnerShadow choke="0.26" height="149.99" radius="72.64" width="142.57" />
+   </effect>
+</BorderPane>
