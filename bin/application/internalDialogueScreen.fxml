@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.media.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="650.0" prefWidth="1200.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dialogueScreenController">
+<SplitPane prefHeight="650.0" prefWidth="1200.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="internalDialogueScreenController">
    <items>
-      <AnchorPane>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0">
          <children>
-            <SplitPane centerShape="false" dividerPositions="0.6051779935275081" layoutY="326.0" orientation="VERTICAL" prefWidth="502.0" scaleShape="false">
+            <SplitPane centerShape="false" dividerPositions="0.6051779935275081" layoutX="349.0" layoutY="314.0" orientation="VERTICAL" prefWidth="502.0" scaleShape="false">
                <effect>
                   <InnerShadow />
                </effect>
@@ -117,67 +115,6 @@
                      </padding>
                   </HBox>
                </items>
-            </SplitPane>
-            <SplitPane layoutX="698.0" layoutY="411.0" prefWidth="500.0">
-               <items>
-                  <VBox alignment="CENTER" layoutX="378.0" layoutY="14.0">
-                     <children>
-                        <Label fx:id="otherPersonName" pickOnBounds="false" text="otherPersonName" textAlignment="CENTER">
-                           <effect>
-                              <Glow level="1.0" />
-                           </effect>
-                           <font>
-                              <Font name="Centaur" size="24.0" />
-                           </font>
-                           <textFill>
-                              <LinearGradient endX="1.0" endY="1.0">
-                                 <stops>
-                                    <Stop color="#00fa96" />
-                                    <Stop color="#00fa96" offset="0.007662835249042145" />
-                                    <Stop color="#0096fa" offset="1.0" />
-                                 </stops>
-                              </LinearGradient>
-                           </textFill>
-                        </Label>
-                        <ScrollPane fitToWidth="true" prefViewportHeight="180.0" prefViewportWidth="360.0" prefWidth="586.0">
-                           <content>
-                              <TextFlow prefWidth="355.0" textAlignment="CENTER">
-                                 <children>
-                                    <Text fx:id="otherPersonDialogue" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="otherPersonDialogue">
-                                       <effect>
-                                          <Glow level="1.0" />
-                                       </effect>
-                                       <fill>
-                                          <LinearGradient endX="1.0" endY="1.0">
-                                             <stops>
-                                                <Stop color="#00fa96" />
-                                                <Stop color="#0096fa" offset="1.0" />
-                                             </stops>
-                                          </LinearGradient>
-                                       </fill>
-                                       <font>
-                                          <Font name="Centaur" size="20.0" />
-                                       </font>
-                                    </Text>
-                                 </children>
-                                 <padding>
-                                    <Insets left="3.0" right="3.0" />
-                                 </padding>
-                              </TextFlow>
-                           </content>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </ScrollPane>
-                     </children>
-                     <padding>
-                        <Insets left="8.0" />
-                     </padding>
-                  </VBox>
-               </items>
-               <padding>
-                  <Insets bottom="15.0" left="3.0" right="10.0" top="10.0" />
-               </padding>
             </SplitPane>
          </children>
       </AnchorPane>

@@ -10,12 +10,13 @@ import javafx.util.Duration;
 import logic.battle;
 import logic.character;
 import logic.enemy;
+import logic.mainCharacter;
 
 public class Main extends Application {
 
 	public static Stage parentWindow;
 	static FadeTransition fadeOut = new FadeTransition();
-	static character MC = new character();
+	static mainCharacter MC = new mainCharacter("Cleave");
 	static FadeTransition fadeIn = new FadeTransition();
 	static String name;
 	static battle battle = new battle();
@@ -23,18 +24,18 @@ public class Main extends Application {
 	@Override
 	public void start(Stage stage) throws Exception {
 
-		MC.setName("Cleave");
-
 		battle.getEnemies().add(new enemy());
 		battle.getEnemies().add(new enemy());
 
 		battle.getAllies().add(MC);
-		character MD = new character();
+		character MD = new character("ayeo");
 		MD.setName("ayeo");
 		battle.getAllies().add(MD);
+		
 //		character MF = new character();
 //		MF.setName("eguo3b4jo34ijk");
 //		battle.getAllies().add(MF);
+		
 		fadeOut.setDuration(Duration.millis(1));
 		fadeOut.setFromValue(1.0);
 		fadeOut.setToValue(0.0);

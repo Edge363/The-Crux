@@ -10,114 +10,104 @@ import java.net.URL;
 import java.util.ArrayList;
 
 public class character implements Serializable {
-	private static final long serialVersionUID = 1L;
-	private String name;
-	private double level;
+	protected static final long serialVersionUID = 1L;
+	
+	protected String name;
+	protected double level;
 
-	private double HP;// health
-	private double ST;// stamina
-	private double MP;// mana
-	private double XP;// experience
-	private String Location = "Dawngeil";// Used to identify where the player
-											// is, and which scene they should
-											// be brought back to.
+	protected double HP;// health
+	protected double ST;// stamina
+	protected double MP;// mana
+	protected double XP;// experience
 
-	private double independence = 0;
-	private double agressiveness = 0;
-	private double empathy = 0;
-
-	private double STR;// Improves base physical damage, and stamina
-	private double AG;// improves dodge chance.
-	private double smallArms = (int) (Math.random() * 5);
-	private double throwing = (int) (Math.random() * 5);
-	private double lightArmor = (int) (Math.random() * 5);
-	private double SP;// determines if you or the enemy goes first
-	private double running = (int) (Math.random() * 5);// increases the passive
+	protected double STR;// Improves base physical damage, and stamina
+	protected double AG;// improves dodge chance.
+	protected double smallArms = (int) (Math.random() * 5);
+	protected double throwing = (int) (Math.random() * 5);
+	protected double lightArmor = (int) (Math.random() * 5);
+	protected double SP;// determines if you or the enemy goes first
+	protected double running = (int) (Math.random() * 5);// increases the passive
 														// recovery of all flat
 														// regens.
-	private double archery = (int) (Math.random() * 5);
-	private double swordfighting = (int) (Math.random() * 5);
-	private double PRE;// improves crit chance
-	private double largeArms = (int) (Math.random() * 5);
-	private double aim = (int) (Math.random() * 5);// Higher percentage to hit
-	private double dodging = (int) (Math.random() * 5);// flat dodge chance
+	
+	protected double archery = (int) (Math.random() * 5);
+	protected double swordfighting = (int) (Math.random() * 5);
+	protected double PRE;// improves crit chance
+	protected double largeArms = (int) (Math.random() * 5);
+	protected double aim = (int) (Math.random() * 5);// Higher percentage to hit
+	protected double dodging = (int) (Math.random() * 5);// flat dodge chance
 														// increase
 
 	public double INT;// improves base magic damage, and mana.
-	private double CHAR; // Improves allies damage and defense.
-	private double taming = (int) (Math.random() * 5); // can tame better
+	protected double CHAR; // Improves allies damage and defense.
+	protected double taming = (int) (Math.random() * 5); // can tame better
 														// creatures
-	private double speechcraft = (int) (Math.random() * 5);// better dialogue
+	protected double speechcraft = (int) (Math.random() * 5);// better dialogue
 															// options
-	private double leadership = (int) (Math.random() * 5);// can have more
+	protected double leadership = (int) (Math.random() * 5);// can have more
 															// allies.
-	private double WIS;// enhances mana regen
-	private double alchemy = (int) (Math.random() * 5);
-	private double magicCasting = (int) (Math.random() * 5);
-	private double summoning = (int) (Math.random() * 5);// More available
+	protected double WIS;// enhances mana regen
+	protected double alchemy = (int) (Math.random() * 5);
+	protected double magicCasting = (int) (Math.random() * 5);
+	protected double summoning = (int) (Math.random() * 5);// More available
 															// summons
-	private double ECO; // More gold
-	private double barter = (int) (Math.random() * 5); // lower prices, higher
+	protected double ECO; // More gold
+	protected double barter = (int) (Math.random() * 5); // lower prices, higher
 														// sell values.
-	private double investing = (int) (Math.random() * 5); // better shop
+	protected double investing = (int) (Math.random() * 5); // better shop
 															// investment
 															// returns.
-	private double appraisal = (int) (Math.random() * 5); // Allows you to
-															// identify
+	protected double appraisal = (int) (Math.random() * 5); // Allows you to
+														// identify
 															// artifacts.
-
-	private double END;// Improves base defense and health
-	private double VIT;// more health regen
-	private double magicTolerance = (int) (Math.random() * 5);// can cast more
+	
+	protected double END;// Improves base defense and health
+	protected double VIT;// more health regen
+	protected double magicTolerance = (int) (Math.random() * 5);// can cast more
 																// spells
-	private double weaponSmithing = (int) (Math.random() * 5);
-	private double pugulism = (int) (Math.random() * 5);// hand to hand
-	private double DEF;// more flat defense
-	private double heavyArmor = (int) (Math.random() * 5);
-	private double firstAid = (int) (Math.random() * 5);// better healing on you
+	protected double weaponSmithing = (int) (Math.random() * 5);
+	protected double pugulism = (int) (Math.random() * 5);// hand to hand
+	protected double DEF;// more flat defense
+	protected double heavyArmor = (int) (Math.random() * 5);
+	protected double firstAid = (int) (Math.random() * 5);// better healing on you
 														// in general
-	private double survival = (int) (Math.random() * 5);// recipes n stuff
-	private double CON; // stamina regen
-	private double armorSmithing = (int) (Math.random() * 5);
-	private double hunting = (int) (Math.random() * 5); // deal more damage on
+	protected double survival = (int) (Math.random() * 5);// recipes n stuff
+	protected double CON; // stamina regen
+	protected double armorSmithing = (int) (Math.random() * 5);
+	protected double hunting = (int) (Math.random() * 5); // deal more damage on
 														// first hit
-	private double mining = (int) (Math.random() * 5); // slowly rev up to deal
+	protected double mining = (int) (Math.random() * 5); // slowly rev up to deal
 														// more damage over long
 														// fights
 
-	private double HPR;// health regen
-	private double MPR;// mana regen
-	private double MS;// manasteal
-	private double ARM;// armor
-	private double MR;// magic resistance
-	private double LS;// lifesteal
-	private double SS;// staminasteal
-	private double DC; // Dodge chance
-	private double CC; // Crit chance
-	private double STREG;// Stamina regeneration
-	private double APR;// Action podouble regeneration
-	private double APP;// Action podouble pool
-	private double LSB;// Leader ship bonus
-	private double M;// Momentum, which is how much extra % damage you deal each
+	protected double HPR;// health regen
+	protected double MPR;// mana regen
+	protected double MS;// manasteal
+	protected double ARM;// armor
+	protected double MR;// magic resistance
+	protected double LS;// lifesteal
+	protected double SS;// staminasteal
+	protected double DC; // Dodge chance
+	protected double CC; // Crit chance
+	protected double STREG;// Stamina regeneration
+	protected double SR;// Action podouble regeneration
+	protected double SPP;// Action podouble pool
+	protected double LSB;// Leader ship bonus
+	protected double M;// Momentum, which is how much extra % damage you deal each
 						// turn the battle continues.
-	private double FS;// first strike, a percentage of how much you will deal
+	protected double FS;// first strike, a percentage of how much you will deal
 						// extra the first turn.
-	private double ACC;// accuracy
-	private double ATT;// Attack
-	private double MATT;// MagicAttack
+	protected double ACC;// accuracy
+	protected double ATT;// Attack
+	protected double MATT;// MagicAttack
 
-	private ArrayList<move> moves = new ArrayList<move>();
+	protected ArrayList<move> moves = new ArrayList<move>();
+	
+	protected ArrayList<Double> currentStats = new ArrayList<Double>();
 
-	private double job = 5;// class, 6 different ones. 0-5.
-	// 0= warlord, 1 = Arcanist, 2=capitalist, 3=Brute, 4=Assassin, 5=Jack of
-	// all trades
+	public character(String n) {
 
-	private ArrayList<Double> currentStats = new ArrayList<Double>();
-	Boolean[] perkManager = new Boolean[20];
-
-	// ideas : armor Penetration, magic penetration, poison.
-	public character() {
-
+		name=n;
 		// dynamic values
 		STR = 10 + (int) (Math.random() * 3);
 		AG = 5 + (int) (Math.random() * 5);
@@ -139,8 +129,8 @@ public class character implements Serializable {
 		DC = 5 + (int) (AG / 2); // Dodge chance
 		CC = 5 + (int) (PRE); // Crit chance
 		STREG = 1 + (int) (CON / 2.5);// Stamina regeneration
-		APR = 1 + (int) running / 6;// Action podouble regeneration
-		APP = 10 + SP;// Action podouble pool
+		SR = 1 + (int) running / 6;// Action podouble regeneration
+		SPP = 10 + SP;// Action podouble pool
 
 		HPR = 1 + (int) (VIT / 2);
 		MPR = 2 + (int) (WIS);
@@ -149,7 +139,7 @@ public class character implements Serializable {
 		LS = 0;
 		MS = 0;
 		SS = 0;
-		ACC =80 + aim;
+		ACC =100 + aim;
 		M = (int) (mining / 5) + 1;
 		FS = (int) (hunting * 2);
 
@@ -187,8 +177,8 @@ public class character implements Serializable {
 		currentStats.add(DC);
 		currentStats.add(CC);
 		currentStats.add(STREG);
-		currentStats.add(APR);
-		currentStats.add(APP);
+		currentStats.add(SR);
+		currentStats.add(SPP);
 		currentStats.add(M);
 		currentStats.add(FS);
 		currentStats.add(ACC);
@@ -215,7 +205,6 @@ public class character implements Serializable {
 		 "magicCasting", 8, 0, 3, 15, resource2);
 		 badIntentions.setExplanation(
 		 " \"The most common form of hurting another person, hitting has been a common occurence ever since multicellular creatures evolved, and quite possibly, long before that.\" \n \n ~Weiler Gox, The BodyHorror. \n \n");
-		
 
 		this.addMove(badIntentions);
 		final URL resource3 = getClass().getResource("psychicWarp.wav");
@@ -259,8 +248,8 @@ public class character implements Serializable {
 		currentStats.set(22, DC);
 		currentStats.set(23, CC);
 		currentStats.set(24, STREG);
-		currentStats.set(25, APR);
-		currentStats.set(26, APP);
+		currentStats.set(25, SR);
+		currentStats.set(26, SPP);
 		currentStats.set(27, M);
 		currentStats.set(28, FS);
 		currentStats.set(29, ACC);
@@ -737,295 +726,14 @@ public class character implements Serializable {
 			this.ccEssence(this.getMP());
 		}
 
-		if ((this.cActionPointPool() + this.cActionPointRegen()) * (this.getRunning() / 50 + 1) < this.getAPP()) {
+		if ((this.cActionPointPool() + this.cActionPointRegen()) * (this.getRunning() / 50 + 1) < this.getSPP()) {
 			this.ccActionPointPool((this.cActionPointPool() + this.cActionPointRegen()) * (this.getRunning() / 50 + 1));
 		}
 
 		else {
-			this.ccActionPointPool(this.getAPP());
+			this.ccActionPointPool(this.getSPP());
 		}
 
-	}
-
-	public void levelUp(String cruxStat, String[] satteliteStats, String[] skills) {
-
-		// this will raise all of the new stats based on a series of strings
-		// indicating what to level up. This will all be done graphically of
-		// course. Of course.
-		this.level++;
-		this.XP = (int) (Math.pow(this.level, 1.5) * (100 + this.level));
-
-		if (cruxStat.equals("STR")) {
-			this.STR++;
-		} else if (cruxStat.equals("INT")) {
-			this.INT++;
-		} else if (cruxStat.equals("END")) {
-			this.END++;
-		}
-		for (String stat : satteliteStats) {
-			if (stat.equals("AG")) {
-				this.AG++;
-			} else if (stat.equals("SP")) {
-				this.SP++;
-			} else if (stat.equals("PRE")) {
-				this.PRE++;
-			} else if (stat.equals("CHAR")) {
-				this.CHAR++;
-			} else if (stat.equals("WIS")) {
-				this.SP++;
-			} else if (stat.equals("ECO")) {
-				this.PRE++;
-			} else if (stat.equals("VIT")) {
-				this.AG++;
-			} else if (stat.equals("DEF")) {
-				this.SP++;
-			} else if (stat.equals("CON")) {
-				this.PRE++;
-			}
-		}
-
-		for (String skill : skills) {
-
-			this.skillIncrease(skill);
-
-		}
-
-		randomSkillIncrease(5);
-		// leveling up for warlord
-		if (this.job == 0) {
-			for (double a = 0; a < 4; a++) {
-				double skillDecider = (int) (Math.random() * 4);
-				if (skillDecider == 0) {
-					this.skillIncrease("lightArmor");
-				} else if (skillDecider == 1) {
-					this.skillIncrease("leaderShip");
-				} else if (skillDecider == 2) {
-					this.skillIncrease("aim");
-				} else if (skillDecider == 3) {
-					this.skillIncrease("weaponSmithing");
-				}
-			}
-		}
-		// arcanist
-		if (this.job == 1) {
-			for (double a = 0; a < 4; a++) {
-				double skillDecider = (int) (Math.random() * 4);
-				if (skillDecider == 0) {
-					this.skillIncrease("magicCasting");
-				} else if (skillDecider == 1) {
-					this.skillIncrease("summoning");
-				} else if (skillDecider == 2) {
-					this.skillIncrease("aim");
-				} else if (skillDecider == 3) {
-					this.skillIncrease("magicTolerance");
-				}
-			}
-		}
-		// capitalist
-		if (this.job == 2) {
-			for (double a = 0; a < 4; a++) {
-				double skillDecider = (int) (Math.random() * 4);
-				if (skillDecider == 0) {
-					this.skillIncrease("investing");
-				} else if (skillDecider == 1) {
-					this.skillIncrease("leaderShip");
-				} else if (skillDecider == 2) {
-					this.skillIncrease("speechcraft");
-				} else if (skillDecider == 3) {
-					this.skillIncrease("running");
-				}
-			}
-		}
-		// brute
-		if (this.job == 3) {
-			for (double a = 0; a < 4; a++) {
-				double skillDecider = (int) (Math.random() * 4);
-				if (skillDecider == 0) {
-					this.skillIncrease("heavyArmor");
-				} else if (skillDecider == 1) {
-					this.skillIncrease("armorSmithing");
-				} else if (skillDecider == 2) {
-					this.skillIncrease("mining");
-				} else if (skillDecider == 3) {
-					this.skillIncrease("pugulism");
-				}
-			}
-		}
-		// Assassin
-		if (this.job == 4) {
-			for (double a = 0; a < 4; a++) {
-				double skillDecider = (int) (Math.random() * 4);
-				if (skillDecider == 0) {
-					this.skillIncrease("swordfighting");
-				} else if (skillDecider == 1) {
-					this.skillIncrease("magicCasting");
-				} else if (skillDecider == 2) {
-					this.skillIncrease("hunting");
-				} else if (skillDecider == 3) {
-					this.skillIncrease("alchemy");
-				}
-			}
-		}
-
-		// jack
-		if (this.job == 5) {
-			this.randomSkillIncrease(7);
-		} else {
-
-		}
-		// sets the new combat stat values based on new values given by the
-		// level up.
-		setATT(STR + 5);// base attack
-		setMATT(INT + 5);// base magic attack
-		LSB = (CHAR * 3 + leadership);// leadership bonus
-		DC = 5 + (int) (AG / 2); // Dodge chance
-		CC = 5 + (int) (PRE); // Crit chance
-		STREG = 1 + (int) (CON / 2.5);// Stamina regeneration
-		APR = 1 + (int) running / 6;// Action podouble regeneration
-		APP = 10 + SP;// Action podouble pool
-
-		HPR = 1 + (int) (VIT / 2);
-		MPR = 2 + (int) (WIS / 2);
-		ARM = 0 + DEF;
-		MR = 0 + magicTolerance;
-		LS = 0;
-		MS = 0;
-		SS = 0;
-		ACC = 50 + aim;
-		M = (int) (mining / 5) + 1;
-		FS = (int) (hunting * 2);
-
-		HP = END * 10;
-		MP = INT * 10;
-		ST = STR * 10;
-
-		// Updates all of the moves based on new skill values.
-		ArrayList<move> copy = this.getMoves();
-		this.getMoves().clear();
-		for (move move : copy) {
-			this.addMove(move);
-		}
-	}
-
-	public void skillIncrease(String skill) {
-		if (skill.equals("smallArms")) {
-			this.smallArms++;
-		} else if (skill.equals("throwing")) {
-			this.throwing++;
-		} else if (skill.equals("lightArmor")) {
-			this.lightArmor++;
-		}
-		if (skill.equals("running")) {
-			this.running++;
-		} else if (skill.equals("archery")) {
-			this.archery++;
-		} else if (skill.equals("swordfighting")) {
-			this.swordfighting++;
-		}
-		if (skill.equals("largeArms")) {
-			this.largeArms++;
-		} else if (skill.equals("aim")) {
-			this.aim++;
-		} else if (skill.equals("dodging")) {
-			this.dodging++;
-		} else if (skill.equals("taming")) {
-			this.taming++;
-		} else if (skill.equals("speechcraft")) {
-			this.speechcraft++;
-		} else if (skill.equals("leadership")) {
-			this.leadership++;
-		} else if (skill.equals("alchemy")) {
-			this.alchemy++;
-		} else if (skill.equals("magicCasting")) {
-			this.magicCasting++;
-		} else if (skill.equals("summoning")) {
-			this.summoning++;
-		} else if (skill.equals("barter")) {
-			this.barter++;
-		} else if (skill.equals("investing")) {
-			this.investing++;
-		} else if (skill.equals("appraisal")) {
-			this.appraisal++;
-		} else if (skill.equals("magicTolerance")) {
-			this.magicTolerance++;
-		} else if (skill.equals("weaponSmithing")) {
-			this.weaponSmithing++;
-		} else if (skill.equals("pugulism")) {
-			this.pugulism++;
-		} else if (skill.equals("heavyArmor")) {
-			this.heavyArmor++;
-		} else if (skill.equals("firstAid")) {
-			this.firstAid++;
-		} else if (skill.equals("survival")) {
-			this.survival++;
-		} else if (skill.equals("armorSmithing")) {
-			this.armorSmithing++;
-		} else if (skill.equals("hunting")) {
-			this.hunting++;
-		} else if (skill.equals("mining")) {
-			this.mining++;
-		}
-	}
-
-	public void randomSkillIncrease(double a) {
-		for (double x = 0; x < a; x++) {
-			double skillDecider = (int) (Math.random() * 27);
-			if (skillDecider == 0) {
-				this.skillIncrease("smallArms");
-			} else if (skillDecider == 1) {
-				this.skillIncrease("throwing");
-			} else if (skillDecider == 2) {
-				this.skillIncrease("lightArmor");
-			} else if (skillDecider == 3) {
-				this.skillIncrease("running");
-			} else if (skillDecider == 4) {
-				this.skillIncrease("archery");
-			} else if (skillDecider == 5) {
-				this.skillIncrease("swordfighting");
-			} else if (skillDecider == 6) {
-				this.skillIncrease("largeArms");
-			} else if (skillDecider == 7) {
-				this.skillIncrease("aim");
-			} else if (skillDecider == 8) {
-				this.skillIncrease("dodging");
-			} else if (skillDecider == 9) {
-				this.skillIncrease("taming");
-			} else if (skillDecider == 10) {
-				this.skillIncrease("speechcraft");
-			} else if (skillDecider == 11) {
-				this.skillIncrease("leaderShip");
-			} else if (skillDecider == 12) {
-				this.skillIncrease("alchemy");
-			} else if (skillDecider == 13) {
-				this.skillIncrease("magicCasting");
-			} else if (skillDecider == 14) {
-				this.skillIncrease("summoning");
-			} else if (skillDecider == 15) {
-				this.skillIncrease("barter");
-			} else if (skillDecider == 16) {
-				this.skillIncrease("investing");
-			} else if (skillDecider == 17) {
-				this.skillIncrease("appraisal");
-			} else if (skillDecider == 18) {
-				this.skillIncrease("magicTolerance");
-			} else if (skillDecider == 19) {
-				this.skillIncrease("weaponSmithing");
-			} else if (skillDecider == 20) {
-				this.skillIncrease("pugulism");
-			} else if (skillDecider == 21) {
-				this.skillIncrease("heavyArmor");
-			} else if (skillDecider == 22) {
-				this.skillIncrease("firstAid");
-			} else if (skillDecider == 23) {
-				this.skillIncrease("survival");
-			} else if (skillDecider == 24) {
-				this.skillIncrease("armorSmithing");
-			} else if (skillDecider == 25) {
-				this.skillIncrease("hunting");
-			} else if (skillDecider == 26) {
-				this.skillIncrease("mining");
-			}
-		}
 	}
 
 	public void battleEnemy(character A) {
@@ -1042,14 +750,6 @@ public class character implements Serializable {
 
 	public void setCurrentStats(ArrayList<Double> currentStats) {
 		this.currentStats = currentStats;
-	}
-
-	public Boolean[] getPerkManager() {
-		return perkManager;
-	}
-
-	public void setPerkManager(Boolean[] perkManager) {
-		this.perkManager = perkManager;
 	}
 
 	public double getLevel() {
@@ -1516,28 +1216,20 @@ public class character implements Serializable {
 		STREG = sTREG;
 	}
 
-	public double getAPR() {
-		return APR;
+	public double getSR() {
+		return SR;
 	}
 
-	public void setAPR(double aPR) {
-		APR = aPR;
+	public void setSR(double aPR) {
+		SR = aPR;
 	}
 
-	public double getAPP() {
-		return APP;
+	public double getSPP() {
+		return SPP;
 	}
 
-	public void setAPP(double aPP) {
-		APP = aPP;
-	}
-
-	public double getJob() {
-		return job;
-	}
-
-	public void setJob(double job) {
-		this.job = job;
+	public void setSPP(double aPP) {
+		SPP = aPP;
 	}
 
 	public ArrayList<Double> getCurrentStats() {
@@ -1559,39 +1251,7 @@ public class character implements Serializable {
 	public void setMATT(double mATT) {
 		MATT = mATT;
 	}
-
-	public String getLocation() {
-		return Location;
-	}
-
-	public void setLocation(String location) {
-		Location = location;
-	}
-
-	public double getIndependence() {
-		return independence;
-	}
-
-	public void setIndependence(double independence) {
-		this.independence = independence;
-	}
-
-	public double getAgressiveness() {
-		return agressiveness;
-	}
-
-	public void setAgressiveness(double agressiveness) {
-		this.agressiveness = agressiveness;
-	}
-
-	public double getEmpathy() {
-		return empathy;
-	}
-
-	public void setEmpathy(double empathy) {
-		this.empathy = empathy;
-	}
-
+	
 	public ArrayList<move> getMoves() {
 		return moves;
 	}
