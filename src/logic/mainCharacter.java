@@ -8,6 +8,8 @@ package logic;
 import java.io.Serializable;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class mainCharacter extends character {
 	private static final long serialVersionUID = 1L;
@@ -21,19 +23,27 @@ public class mainCharacter extends character {
 	// all trades
 	
 	Boolean[] perkManager = new Boolean[20];
-	
-	dialogueBot dialogueTree;
 
 	// ideas : armor Penetration, magic penetration, poison.
-	public mainCharacter(String n) {
-		super(n);
+	public mainCharacter(String inputText) {
+		
+		super(inputText);
+		List<String> results = game.keywordTagSearch(inputText,
+		(List<String>) Arrays.asList(new String[]{ "job","empathy","independence","agressiveness" }));
+		job=Integer.parseInt(results.get(0));
+		empathy=Integer.parseInt(results.get(1));
+		independence=Integer.parseInt(results.get(2));
+		agressiveness=Integer.parseInt(results.get(3));
+
 		// dynamic values
 	}
+	
 	public void levelUp(String cruxStat, String[] satteliteStats, String[] skills) {
 
 		// this will raise all of the new stats based on a series of strings
 		// indicating what to level up. This will all be done graphically of
 		// course. Of course.
+		
 		this.level++;
 		this.XP = (int) (Math.pow(this.level, 1.5) * (100 + this.level));
 
@@ -88,6 +98,7 @@ public class mainCharacter extends character {
 				}
 			}
 		}
+		
 		// arcanist
 		if (this.job == 1) {
 			for (double a = 0; a < 4; a++) {
@@ -103,6 +114,7 @@ public class mainCharacter extends character {
 				}
 			}
 		}
+		
 		// capitalist
 		if (this.job == 2) {
 			for (double a = 0; a < 4; a++) {
@@ -118,6 +130,7 @@ public class mainCharacter extends character {
 				}
 			}
 		}
+		
 		// brute
 		if (this.job == 3) {
 			for (double a = 0; a < 4; a++) {
@@ -133,6 +146,7 @@ public class mainCharacter extends character {
 				}
 			}
 		}
+		
 		// Assassin
 		if (this.job == 4) {
 			for (double a = 0; a < 4; a++) {
@@ -155,6 +169,7 @@ public class mainCharacter extends character {
 		} else {
 
 		}
+		
 		// sets the new combat stat values based on new values given by the
 		// level up.
 		setATT(STR + 5);// base attack
@@ -165,7 +180,6 @@ public class mainCharacter extends character {
 		STREG = 1 + (int) (CON / 2.5);// Stamina regeneration
 		SR = 1 + (int) running / 6;// Action podouble regeneration
 		SPP = 10 + SP;// Action podouble pool
-
 		HPR = 1 + (int) (VIT / 2);
 		MPR = 2 + (int) (WIS / 2);
 		ARM = 0 + DEF;

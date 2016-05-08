@@ -55,7 +55,7 @@ public class GenericTree<T> {
         GenericTreeNode<T> returnNode = null;
         int i = 0;
 
-        if (currentNode.getData().equals(dataToFind)) {
+        if (currentNode.getoption().equals(dataToFind)) {
             returnNode = currentNode;
         }
 

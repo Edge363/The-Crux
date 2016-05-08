@@ -13,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
@@ -31,6 +32,8 @@ public class wonBattleController implements Initializable {
 	@FXML
 	private Button getUp;
 	@FXML
+	private Slider experienceBar;
+	@FXML
 	private BorderPane FP;
 	@FXML
 	private Text text;
@@ -41,7 +44,8 @@ public class wonBattleController implements Initializable {
 	public void initialize(URL url, ResourceBundle rb) {
 
 		Main.fadeIn.play();
-
+		experienceBar.setMax(Main.MC.getEXP());
+		experienceBar.setValue(Main.MC.cExperience());
 	}
 
 	@FXML

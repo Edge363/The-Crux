@@ -73,7 +73,7 @@ public class enemy implements Serializable {
 	private ArrayList<move> moves = new ArrayList<move>();
 
 	// ideas : armor Penetration, magic penetration, poison.
-	public enemy() {
+	public enemy(){
 		this.setName("Rat Goblin");
 		final URL resource = getClass().getResource("strike.mp3");
 		move hit = new move("Hit", "attack", "", "pugulism", 4, 0, 5, 0, resource);
@@ -83,7 +83,6 @@ public class enemy implements Serializable {
 		move strike = new move("Strike", "attack", "", "swordFighting", 12, 0, 10, 5, resource);
 		strike.setExplanation(
 				" \"Somehow it always seems to boil down to two men beating each other to death with something. A rock, a stick, a gun...the largest difference between now and then is how monstrous some men can become...\" \n \n ~Kelcio, Peacekeeper of the South.. \n \n");
-
 		this.addMove(strike);
 
 		move badIntentions = new move("Bad Intentions", "spell", "", "magicCasting", 8, 0, 3, 15, resource);
@@ -764,7 +763,6 @@ public class enemy implements Serializable {
 				if (turnNumber == 0) {
 					damage = (int) (this.getATT() + move.getPower()) * (this.cFirstStrike() / 100 + 1);
 					if (Math.random() < (this.cCritChance() / 100)) {
-						System.out.println("crit+first strike");
 						if (damage * 2 > defense) {
 							damage *= 2;
 							damage -= defense;
@@ -775,7 +773,6 @@ public class enemy implements Serializable {
 							target.ccHealth(target.cHealth() - 1);
 						}
 					} else {
-						System.out.println("first strike");
 						if (damage > defense) {
 							damage -= defense;
 							target.ccHealth(target.cHealth() - damage);
@@ -788,7 +785,6 @@ public class enemy implements Serializable {
 
 					damage = (int) ((this.getATT() + move.getPower()) * ((this.cMomentum() * turnNumber) / 100 + 1));
 					if (Math.random() < (this.cCritChance() / 100)) {
-						System.out.println("crit");
 						if (damage * 2 > defense) {
 							damage *= 2;
 							damage -= defense;
@@ -812,7 +808,6 @@ public class enemy implements Serializable {
 				if (turnNumber == 0) {
 					damage = (int) ((this.getMATT() + move.getPower()) * (this.cFirstStrike() / 100 + 1));
 					if (Math.random() < (this.cCritChance() / 100)) {
-						System.out.println("crit+first strike");
 						if (damage * 2 > defense) {
 							damage *= 2;
 							damage = (damage - defense);
@@ -822,7 +817,6 @@ public class enemy implements Serializable {
 							target.ccHealth(target.cHealth() - 1);
 						}
 					} else {
-						System.out.println("first strike");
 						if (damage > defense) {
 							damage -= defense;
 							target.ccHealth(target.cHealth() - damage);
@@ -835,7 +829,6 @@ public class enemy implements Serializable {
 					damage = (int) ((this.getMATT() + move.getPower()) * (((this.cMomentum() * turnNumber) / 100 + 1)));
 
 					if (Math.random() < (this.cCritChance() / 100)) {
-						System.out.println("crit");
 						if (damage * 2 > defense) {
 							damage *= 2;
 							damage = (damage - defense);

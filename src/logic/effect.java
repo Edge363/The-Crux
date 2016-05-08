@@ -1,27 +1,35 @@
 package logic;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class effect {
-private String effect;
-private int strength;
 
-effect(String e , int s){
-	effect = e;
-	strength =s;
-}
+	private String effect;
+	private int strength;
 
-public String getEffect() {
-	return effect;
-}
+	effect(String inputText) {
+		
+		List<String> results = game.keywordTagSearch(inputText,
+				(List<String>) Arrays.asList(new String[] { "effectID","strength" }));
+		effect=results.get(0);
+		strength=Integer.parseInt(results.get(1));
+		
+	}
 
-public void setEffect(String effect) {
-	this.effect = effect;
-}
+	public String getEffect() {
+		return effect;
+	}
 
-public int getStrength() {
-	return strength;
-}
+	public void setEffect(String effect) {
+		this.effect = effect;
+	}
 
-public void setStrength(int strength) {
-	this.strength = strength;
-}
+	public int getStrength() {
+		return strength;
+	}
+
+	public void setStrength(int strength) {
+		this.strength = strength;
+	}
 }

@@ -113,7 +113,8 @@ public class battleScreenController implements Initializable {
 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-
+		System.out.println(Main.MC.cExperience());
+		System.out.println(Main.MC.getEXP());		
 		Rectangle clip = new Rectangle(200, 200);
 		clip.setArcWidth(20);
 		clip.setArcHeight(20);
@@ -164,6 +165,8 @@ public class battleScreenController implements Initializable {
 	}
 
 	public void setUp() throws IOException {
+		System.out.println(Main.MC.cExperience());
+		System.out.println(Main.MC.getEXP());
 		if (Main.MC.cHealth() < 0) {
 			Parent window1;
 			window1 = FXMLLoader.load(getClass().getResource("gameOver.fxml"));
@@ -387,17 +390,19 @@ public class battleScreenController implements Initializable {
 							battleLog.setText(battleLog.getText()+"\n \n"+"Cleave missed his attack!");
 						}
 						if (Main.battle.getEnemies().get(x).cHealth() <= 0) {
+							Main.MC.ccExperience(Main.MC.cExperience()-Main.battle.getEnemies().get(x).cExperience());
 							for (character stuff : Main.battle.getAllies()) {
 								stuff.ccExperience(stuff.cExperience()-(Main.battle.getEnemies().get(x).cExperience()));
 							}
+							
 							Main.battle.getEnemies().remove(x);
 
 							switch (enemyNumber) {
 
 							case 1:
+								
 								enemyOne.setDisable(true);
 								enemyOne.setText("empty");
-
 								break;
 							case 2:
 

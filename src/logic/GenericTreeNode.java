@@ -6,7 +6,8 @@ import java.util.regex.Pattern;
 
 public class GenericTreeNode<T> {
 
-    private T data;
+    private T option;
+    private T response;
     private List<GenericTreeNode<T>> children;
     private GenericTreeNode<T> parent;
 
@@ -15,11 +16,17 @@ public class GenericTreeNode<T> {
         children = new ArrayList<GenericTreeNode<T>>();
     }
 
-    public GenericTreeNode(T data) {
+    public GenericTreeNode(T option) {
         this();
-        setData(data);
+        setOption(option);
     }
-
+    
+    public GenericTreeNode(T option,T response) {
+        this();
+        setOption(option);
+       setResponse(response);
+    }
+    
     public GenericTreeNode<T> getParent() {
         return this.parent;
     }
@@ -66,16 +73,16 @@ public class GenericTreeNode<T> {
         return children.get(index);
     }
 
-    public T getData() {
-        return this.data;
+    public T getoption() {
+        return this.option;
     }
 
-    public void setData(T data) {
-        this.data = data;
+    public void setOption(T option) {
+        this.option = option;
     }
 
     public String toString() {
-        return getData().toString();
+        return getoption().toString();
     }
 
     @Override
@@ -90,11 +97,11 @@ public class GenericTreeNode<T> {
            return false;
         }
         GenericTreeNode<?> other = (GenericTreeNode<?>) obj;
-        if (data == null) {
-           if (other.data != null) {
+        if (option == null) {
+           if (other.option != null) {
               return false;
            }
-        } else if (!data.equals(other.data)) {
+        } else if (!option.equals(other.option)) {
            return false;
         }
         return true;
@@ -107,15 +114,15 @@ public class GenericTreeNode<T> {
     public int hashCode() {
        final int prime = 31;
        int result = 1;
-       result = prime * result + ((data == null) ? 0 : data.hashCode());
+       result = prime * result + ((option == null) ? 0 : option.hashCode());
        return result;
     }
 
     public String toStringVerbose() {
-        String stringRepresentation = getData().toString() + ":[";
+        String stringRepresentation = getoption().toString() + ":[";
 
         for (GenericTreeNode<T> node : getChildren()) {
-            stringRepresentation += node.getData().toString() + ", ";
+            stringRepresentation += node.getoption().toString() + ", ";
         }
 
         //Pattern.DOTALL causes ^ and $ to match. Otherwise it won't. It's retarded.
@@ -127,4 +134,12 @@ public class GenericTreeNode<T> {
 
         return stringRepresentation;
     }
+
+	public T getResponse() {
+		return response;
+	}
+
+	public void setResponse(T response) {
+		this.response = response;
+	}
 }

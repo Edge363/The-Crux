@@ -8,12 +8,17 @@ package logic;
 import java.io.Serializable;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import javafx.scene.image.Image;
 
 public class character implements Serializable {
 	protected static final long serialVersionUID = 1L;
 	
 	protected String name;
 	protected double level;
+	Image selfy;
 
 	protected double HP;// health
 	protected double ST;// stamina
@@ -105,23 +110,62 @@ public class character implements Serializable {
 	
 	protected ArrayList<Double> currentStats = new ArrayList<Double>();
 
-	public character(String n) {
+	public character(String inputText) {
+		
+		List<String> results = game.keywordTagSearch(inputText,
+			(List<String>) Arrays.asList(new String[] { "name","level","experience","cruxrandom","sattelliterandom","skillrandom","strength","agility","speed","precision","intelligence","charisma","wisdom","economics","endurance","vitality","defense","constitution","smallarms","throwing","lightarmor","running","archery","swordfighting","largearms","aim","dodging","taming","speechcraft","leadership","alchemy","magiccasting","summoning","barter","investing","appraisal","magictolerance","weaponsmithing","pugulism","heavyarmor","firstaid","survival","armorsmithing","hunting","mining","job","image" }));
+		
+		name=results.get(0);
+		level = Integer.parseInt(results.get(1));
+		XP = Integer.parseInt(results.get(2));
+		int cruxRandom =Integer.parseInt(results.get(3));
+		int sattelliteRandom =Integer.parseInt(results.get(4));
+		int skillRandom =Integer.parseInt(results.get(5));
 
-		name=n;
 		// dynamic values
-		STR = 10 + (int) (Math.random() * 3);
-		AG = 5 + (int) (Math.random() * 5);
-		SP = 5 + (int) (Math.random() * 5);
-		PRE = 5 + (int) (Math.random() * 5);
-		INT = 10 + (int) (Math.random() * 3);
-		CHAR = 5 + (int) (Math.random() * 5);
-		WIS = 5 + (int) (Math.random() * 5);
-		ECO = 5 + (int) (Math.random() * 5);
-		END = 10 + (int) (Math.random() * 3);
-		VIT = 5 + (int) (Math.random() * 5);
-		DEF = 5 + (int) (Math.random() * 5);
-		CON = 5 + (int) (Math.random() * 5);
-
+		STR = Integer.parseInt(results.get(6))+ (int) (Math.random() * cruxRandom);
+		AG = Integer.parseInt(results.get(7)) + (int) (Math.random() * sattelliteRandom);
+		SP = Integer.parseInt(results.get(8)) + (int) (Math.random() * sattelliteRandom);
+		PRE = Integer.parseInt(results.get(9)) + (int) (Math.random() * sattelliteRandom);
+		INT = Integer.parseInt(results.get(10)) + (int) (Math.random() * cruxRandom);
+		CHAR = Integer.parseInt(results.get(11)) + (int) (Math.random() * sattelliteRandom);
+		WIS = Integer.parseInt(results.get(12)) + (int) (Math.random() * sattelliteRandom);
+		ECO = Integer.parseInt(results.get(13)) + (int) (Math.random() * sattelliteRandom);
+		END = Integer.parseInt(results.get(14)) + (int) (Math.random() * cruxRandom);
+		VIT = Integer.parseInt(results.get(15)) + (int) (Math.random() * sattelliteRandom);
+		DEF = Integer.parseInt(results.get(16)) + (int) (Math.random() * sattelliteRandom);
+		CON = Integer.parseInt(results.get(17)) + (int) (Math.random() * sattelliteRandom);
+		
+		smallArms=Integer.parseInt(results.get(18)) + (int) (Math.random() * skillRandom);
+		throwing=Integer.parseInt(results.get(19)) + (int) (Math.random() * skillRandom);
+		lightArmor=Integer.parseInt(results.get(20)) + (int) (Math.random() * skillRandom);
+		running=Integer.parseInt(results.get(21)) + (int) (Math.random() * skillRandom);
+		archery=Integer.parseInt(results.get(22)) + (int) (Math.random() * skillRandom);
+		swordfighting=Integer.parseInt(results.get(23)) + (int) (Math.random() * skillRandom);
+		largeArms=Integer.parseInt(results.get(24)) + (int) (Math.random() * skillRandom);
+		aim=Integer.parseInt(results.get(25)) + (int) (Math.random() * skillRandom);
+		dodging=Integer.parseInt(results.get(26)) + (int) (Math.random() * skillRandom);
+		taming=Integer.parseInt(results.get(27)) + (int) (Math.random() * skillRandom);
+		speechcraft=Integer.parseInt(results.get(28)) + (int) (Math.random() * skillRandom);
+		leadership=Integer.parseInt(results.get(29)) + (int) (Math.random() * skillRandom);
+		alchemy=Integer.parseInt(results.get(30)) + (int) (Math.random() * skillRandom);
+		magicCasting=Integer.parseInt(results.get(31)) + (int) (Math.random() * skillRandom);
+		summoning=Integer.parseInt(results.get(32)) + (int) (Math.random() * skillRandom);
+		barter=Integer.parseInt(results.get(33)) + (int) (Math.random() * skillRandom);
+		investing=Integer.parseInt(results.get(34)) + (int) (Math.random() * skillRandom);
+		appraisal=Integer.parseInt(results.get(35)) + (int) (Math.random() * skillRandom);
+		magicTolerance=Integer.parseInt(results.get(36)) + (int) (Math.random() * skillRandom);
+		weaponSmithing=Integer.parseInt(results.get(37)) + (int) (Math.random() * skillRandom);
+		pugulism=Integer.parseInt(results.get(38)) + (int) (Math.random() * skillRandom);
+		heavyArmor=Integer.parseInt(results.get(39)) + (int) (Math.random() * skillRandom);
+		firstAid=Integer.parseInt(results.get(41)) + (int) (Math.random() * skillRandom);
+		survival=Integer.parseInt(results.get(42)) + (int) (Math.random() * skillRandom);
+		armorSmithing=Integer.parseInt(results.get(43)) + (int) (Math.random() * skillRandom);
+		hunting=Integer.parseInt(results.get(44)) + (int) (Math.random() * skillRandom);
+		mining=Integer.parseInt(results.get(45)) + (int) (Math.random() * skillRandom);
+		
+		selfy= new Image(results.get(46));
+		
 		// actual parametric determined by stats
 		setATT(STR + 3);// base attack
 		setMATT(INT + 3);// base magic attack
@@ -183,11 +227,8 @@ public class character implements Serializable {
 		currentStats.add(FS);
 		currentStats.add(ACC);
 		currentStats.add(LSB);
-		currentStats.add(0.0);
+		currentStats.add(100.0);
 
-		// static ones do not, they are the same for all classes
-		XP = 100;
-		level = 1;
 		// add base moves
 		final URL resource1 = getClass().getResource("hit.wav");
 		move hit = new move("Hit", "attack", "", "pugulism", 8, 0, 10, 0, resource1);
@@ -257,7 +298,6 @@ public class character implements Serializable {
 		currentStats.set(31, XP);
 
 	}
-
 	public double cHealth() {
 		return this.getCurrentStats().get(0);
 	}
@@ -526,7 +566,6 @@ public class character implements Serializable {
 	 * @see         Image
 	 */
 	public double fight(enemy enemy, move move, double turnNumber) {
-		System.out.println(turnNumber);
 		this.ccStamina(this.cStamina() - move.getStaminaCost());
 		this.ccHealth(this.cHealth() - move.getHealthCost());
 		this.ccEssence(this.cEssence() - move.getEssenceCost());
@@ -541,7 +580,6 @@ public class character implements Serializable {
 				if (turnNumber == 0) {
 					damage = (int) (this.getATT() + move.getPower()) * (this.cFirstStrike() / 100 + 1);
 					if (Math.random() < (this.cCritChance() / 100)) {
-						System.out.println("crit+first strike");
 						if (damage * 2 > defense) {
 							
 							damage*=2;
@@ -553,7 +591,6 @@ public class character implements Serializable {
 							enemy.ccHealth(enemy.cHealth() - 1);
 						}
 					} else {
-						System.out.println("first strike");
 						if (damage > defense) {
 							damage-=defense;
 							enemy.ccHealth(enemy.cHealth() - damage);
@@ -567,7 +604,6 @@ public class character implements Serializable {
 					damage = (int) ((this.getATT() + move.getPower())
 							* ((this.cMomentum() * turnNumber) / 100 + 1));
 					if (Math.random() < (this.cCritChance() / 100)) {
-						System.out.println("crit");
 						if (damage * 2 > defense) {
 							damage*=2;
 							damage-=defense;
@@ -591,7 +627,6 @@ public class character implements Serializable {
 				if (turnNumber == 0) {
 					damage = (int) ((this.getMATT() + move.getPower()) * (this.cFirstStrike() / 100 + 1));
 					if (Math.random() < (this.cCritChance() / 100)) {
-						System.out.println("crit+first strike");
 						if (damage * 2 > defense) {
 							damage*=2;
 							damage=(damage-defense);
@@ -601,7 +636,6 @@ public class character implements Serializable {
 							enemy.ccHealth(enemy.cHealth() - 1);
 						}
 					} else {
-						System.out.println("first strike");
 						if (damage > defense) {
 							damage-=defense;
 							enemy.ccHealth(enemy.cHealth() - damage);
@@ -615,7 +649,6 @@ public class character implements Serializable {
 							* (((this.cMomentum() * turnNumber) / 100 + 1)));
 
 					if (Math.random() < (this.cCritChance() / 100)) {
-						System.out.println("crit");
 						if (damage * 2 > defense) {
 							damage*=2;
 							damage=(damage-defense);
@@ -1106,6 +1139,10 @@ public class character implements Serializable {
 
 	public double getSurvival() {
 		return survival;
+	}
+	
+	public double getEXP(){
+		return this.XP;
 	}
 
 	public void setSurvival(double survival) {

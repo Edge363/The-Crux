@@ -1,0 +1,235 @@
+<game>
+
+	<name>The Crux<name/>
+	
+	<locations>
+	
+		<location>
+			<storycharacter>
+				<sidecharacter>example of text one<sidecharacter/>
+			<storycharacter/>
+			<shop>
+				<weapons>
+					<weapon>
+						<weaponname>Stick<weaponname/>
+						<damage>3<damage/>
+						<effect>
+							<effectID>none<effectID/>
+							<strength>0<strength/>
+						<effect/>
+					<weapon/>
+				<weapons/>
+				<armors>
+					<armor>
+						<armorname>shirt<armorname/>
+						<defense><defense/>
+						<effect>
+							<effectID>none<effectID/>
+							<strength>0<strength/>
+						<effect/>
+					<armor/>
+				<armors/>
+				<moves>
+					<move>
+						<movename>hit<movename/>
+						<moveskill>pugulism<moveskill/>
+						<movetype>attack<movetype/>
+						<power>8<power/>
+						<effect>
+							<effectID>none<effectID/>
+							<strength>0<strength/>
+						<effect/>
+						<healthcost>0<healthcost/>
+						<staminacost>5<staminacost/>
+						<essencecost>1<essencecost/>
+						<sound>URL<sound/>
+						<explanation>Beat tar out of them with your fists<explanation/>
+					<move/>
+				<moves/>
+				<background>url<background/>
+			<shop/>
+			<music>url<music/>
+			<background>url<background/>
+			<sidecharacters>
+				<sidecharacter>
+					<name>Jeff<name/>
+					<level>1<level/>
+					<experience>100<experience/> 
+					<cruxrandom>3<cruxrandom/>
+					<sattelliterandom>4<sattelliterandom/>
+					<skillrandom>5<skillrandom/>
+					<strength>10<strength/>
+					<agility>5<agility/>
+					<speed>5<speed/>
+					<precision>5<precision/>
+					<intelligence>10<intelligence/>
+					<charisma>5<charisma/>
+					<wisdom>5<wisdom/>
+					<economics>5<economics/>
+					<endurance>10<endurance/>
+					<vitality>5<vitality/>
+					<defense>5<defense/>
+					<constitution>5<constitution/>
+					<smallarms>3<smallarms/>
+					<throwing>3<throwing/>
+					<lightarmor>3<lightarmor/>
+					<running>3<running/>
+					<archery>3<archery/>
+					<swordfighting>3<swordfighting/>
+					<largearms>3<largearms/>
+					<aim>3<aim/>
+					<dodging>3<dodging/>
+					<taming>3<taming/>
+					<speechcraft>3<speechcraft/>
+					<leadership>3<leadership/>
+					<alchemy>3<alchemy/>
+					<magiccasting>3<magiccasting/>
+					<summoning>3<summoning/>
+					<barter>3<barter/>
+					<investing>3<investing/>
+					<appraisal>3<appraisal/>
+					<magictolerance>3<magictolerance/>
+					<weaponsmithing>3<weaponsmithing/>
+					<pugulism>3<pugulism/>
+					<heavyarmor>3<heavyarmor/>
+					<firstaid>3<firstaid/>
+					<survival>3<survival/>
+					<armorsmithing>3<armorsmithing/>
+					<hunting>3<hunting/>
+					<mining>3<mining/>
+					<job>5<job/>
+					<image>url<image/>
+					<dialoguetree0>
+						<root>Who are you?<root/>
+						<option0>
+							<optiontext>I am Cleave.<optiontext/>
+							<response>Well "Cleave", wanna little extra pocket change?<response/>
+							<option00>
+								<optiontext>Sure.<optiontext/>
+								<response>Awesome, get 5 rattlesnake hides. Need em. Give yah 10 gold so get to it.<response/>
+								<option000>
+									<optiontext>Thank you.<optiontext/>
+									<response>Go and get, before you get got.<response/>
+								<option000/>
+							<option00/>
+						<option0/>
+					<dialoguetree0/>
+				<sidecharacter/>
+				<sidecharacter>
+					<name>arnold<name/>
+					<level>1<level/>
+					<experience>100<experience/> 
+					<cruxrandom>3<cruxrandom/>
+					<sattelliterandom>4<sattelliterandom/>
+					<skillrandom>5<skillrandom/>
+					<strength>10<strength/>
+					<agility>5<agility/>
+					<speed>5<speed/>
+					<precision>5<precision/>
+					<intelligence>10<intelligence/>
+					<charisma>5<charisma/>
+					<wisdom>5<wisdom/>
+					<economics>5<economics/>
+					<endurance>10<endurance/>
+					<vitality>5<vitality/>
+					<defense>5<defense/>
+					<constitution>5<constitution/>
+					<smallarms>3<smallarms/>
+					<throwing>3<throwing/>
+					<lightarmor>3<lightarmor/>
+					<running>3<running/>
+					<archery>3<archery/>
+					<swordfighting>3<swordfighting/>
+					<largearms>3<largearms/>
+					<aim>3<aim/>
+					<dodging>3<dodging/>
+					<taming>3<taming/>
+					<speechcraft>3<speechcraft/>
+					<leadership>3<leadership/>
+					<alchemy>3<alchemy/>
+					<magiccasting>3<magiccasting/>
+					<summoning>3<summoning/>
+					<barter>3<barter/>
+					<investing>3<investing/>
+					<appraisal>3<appraisal/>
+					<magictolerance>3<magictolerance/>
+					<weaponsmithing>3<weaponsmithing/>
+					<pugulism>3<pugulism/>
+					<heavyarmor>3<heavyarmor/>
+					<firstaid>3<firstaid/>
+					<survival>3<survival/>
+					<armorsmithing>3<armorsmithing/>
+					<hunting>3<hunting/>
+					<mining>3<mining/>
+					<job>5<job/>
+					<image>url<image/>
+				<sidecharacter/>
+			<sidecharacters/>
+		<location/>
+		
+		<location>example of text two<location/>
+		
+		<location>example of text three<location/>
+		
+		<location>example of text four<location/>
+		
+	<locations/>
+	
+	<storybattles>more text somehow<storybattles/>
+	
+	<maincharacter>
+		<name>Cleave<name/>
+		<level>1<level/>
+		<experience>100<experience/> 
+		<cruxrandom>3<cruxrandom/>
+		<sattelliterandom>4<sattelliterandom/>
+		<skillrandom>5<skillrandom/>
+		<strength>10<strength/>
+		<agility>5<agility/>
+		<speed>5<speed/>
+		<precision>5<precision/>
+		<intelligence>10<intelligence/>
+		<charisma>5<charisma/>
+		<wisdom>5<wisdom/>
+		<economics>5<economics/>
+		<endurance>10<endurance/>
+		<vitality>5<vitality/>
+		<defense>5<defense/>
+		<constitution>5<constitution/>
+		<smallarms>3<smallarms/>
+		<throwing>3<throwing/>
+		<lightarmor>3<lightarmor/>
+		<running>3<running/>
+		<archery>3<archery/>
+		<swordfighting>3<swordfighting/>
+		<largearms>3<largearms/>
+		<aim>3<aim/>
+		<dodging>3<dodging/>
+		<taming>3<taming/>
+		<speechcraft>3<speechcraft/>
+		<leadership>3<leadership/>
+		<alchemy>3<alchemy/>
+		<magiccasting>3<magiccasting/>
+		<summoning>3<summoning/>
+		<barter>3<barter/>
+		<investing>3<investing/>
+		<appraisal>3<appraisal/>
+		<magictolerance>3<magictolerance/>
+		<weaponsmithing>3<weaponsmithing/>
+		<pugulism>3<pugulism/>
+		<heavyarmor>3<heavyarmor/>
+		<firstaid>3<firstaid/>
+		<survival>3<survival/>
+		<armorsmithing>3<armorsmithing/>
+		<hunting>3<hunting/>
+		<mining>3<mining/>
+		<job>5<job/>
+		<empathy>0<empathy/>
+		<independence>0<independence/>
+		<agressiveness>0<agressiveness/>
+		<image>url<image/>
+	<maincharacter/>
+	<map>
+		<image><image/>
+	<map/>
+<game/>--
